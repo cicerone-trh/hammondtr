@@ -1,0 +1,54 @@
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #444;
+	color: #ddd;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+nav {
+	font-size: 0px; /* inline block fix */
+}
+
+nav a {
+	cursor: pointer;
+
+	text-align: center;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 2em;
+
+	display: inline-block;
+	width: 33%;
+	height: 2em;
+
+	border: 1px solid #fff; 
+	margin: 0;
+	padding: 0;
+
+	background-color: #222;
+	color: #fff;
+
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s ease-in-out;
+	-ms-transition: background 0.3s ease-in-out;
+	-o-transition: background 0.3s ease-in-out;
+	transition: background 0.3s ease-in-out;
+}
+
+nav a:hover {
+	background-color: #a03;
+}
+
+nav a:active {
+	background-color: #fff;
+}
+
+#site-container {
+	width: 640px;
+	margin: 0 auto;
+	padding: 0;
+}
