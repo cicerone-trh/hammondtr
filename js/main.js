@@ -1,15 +1,11 @@
 // creates an onclick function to make the associated block visible, others hidden
 
 function createLink(linkArray, linkid, blockid) {
-	
+/*	
 	$(linkid).click(function() {
 
-		// if associated blockid is hidden, unhide it
-		if ($(blockid).hasClass("hidden")) { 							
-			$(blockid).toggleClass("hidden");
-		}
 
-		// hide the other blocks
+		// first, hide the other blocks
 		for (var i=0; i < linkArray.length; i++) {
 			if (linkArray[i].linkid != linkid) {						
 				if (!$(linkArray[i].blockid).hasClass("hidden")){	
@@ -17,9 +13,22 @@ function createLink(linkArray, linkid, blockid) {
 				}
 			}
 		}
-	});
 
+		// if associated blockid is hidden, unhide it
+		if ($(blockid).hasClass("hidden")) { 							
+			$(blockid).toggleClass("hidden");
+		}
+	});
+*/
 }
+
+
+
+/*
+	$(blockid).slideDown("slow");
+	$(linkArray[i].blockid).slideUp(300);
+
+*/
 
 $(document).ready(function () {
 
@@ -34,5 +43,23 @@ $(document).ready(function () {
 	for (var i = 0; i < linkArray.length; i++) {
 		createLink(linkArray, linkArray[i].linkid, linkArray[i].blockid);
 	}
+	
+	$("#about-link").click(function() {
+		$("#evaluable").slideUp();
+		$("#welcome").slideUp();
+		$("#about-me").delay(400).slideDown(300);
+	});
+
+	$("#eval-link").click(function() {
+		$("#about-me").slideUp();
+		$("#welcome").slideUp();
+		$("#evaluable").delay(400).slideDown(300);
+	});
+
+	$("#landing-link").click(function() {
+		$("#about-me").slideUp();
+		$("#evaluable").slideUp();
+		$("#welcome").delay(400).slideDown(300);
+	});
 });
 

@@ -64,11 +64,13 @@
 		}
 		
 	h2 {
-		margin-bottom: 16px;
+		font-weight: 700;
+		margin-bottom: 12px;
 		font-size: 2.1em;
 		}			
 
 	h3 {
+		font-weight: 700;
 		font-size: 1.5em;
 		margin-bottom: 16px;
 		}			
@@ -91,8 +93,20 @@ body {
 
 .hidden {
 	display: none;
+
+/*	display: none;
 	visibility: hidden;
+	max-height: 0 !important;
+*/
 }
+
+#content div {
+/*
+	max-height: auto;
+	transition: max-height 1.25s ease-in-out;
+	*/
+}
+
 
 #top-nav {
 	margin-top: 2.5em;
@@ -116,6 +130,9 @@ body {
 	overflow: visible;
 	background-color: #222;
 	height: 100%;
+
+	border-radius:3px;
+
 	-webkit-transition: background 0.25s ease-in-out;
 	-moz-transition: background 0.25s ease-in-out;
 	-ms-transition: background 0.25s ease-in-out;
@@ -136,7 +153,9 @@ body {
 	border-top: 2px solid #fff;
 	margin-left: 4px;
 	padding-top: 1em;
+	min-height: 400px;
 }
+
 
 /* content portions */
 
