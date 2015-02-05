@@ -90,9 +90,9 @@
 
 					<h3 id="oop-link">OOP & Recursion</h3>
 					<div id="oop" class="hidden">
+						<iframe id="juggleFestSource">Source Code to JuggleFest Challenge</iframe>
 						<p>This is a solution to a programming challenge offered by Yodle. The challenge asks you to write a program that sorts out a large number of Jugglers with various attributes and desires such that the best teams perform on the most suited Circuits.
-						Or, you can see how I rephrased it in the comments. <span id="prob-link">(Line 61)</span></p>
-						<iframe src="resources/FestivalCoordinator.cs.html" id="juggleComment"></iframe>
+						Or, you can see how I rephrased it in the comments: <span id="prob-link" class="frame-link">(Line 61)</span></p>
 						<span>[expand]</span>
 						<p>The full problem can be found <a href="resources/JuggleFest.html" target="_blank">here</a>.</p>
 						<p>The key to the problem is the recursive method of sorting them: when a team is full, but you come across another Juggler that is better suited, you have to shuffle that displaced Juggler onto another team. And, that Juggler can displace another one and so on. Thus, a recursive function is the solution:</p>
@@ -100,7 +100,7 @@
 
 					<h3 id="asm-link">Assembly, Computation, Low-level Logic</h3>
 					<div id="asm" class="hidden">
-						<iframe id="asm-source" src="resources/gtt0.asm.html"></iframe>
+						<iframe id="asm-source"></iframe>
 						<span>[expand]</span>
 						<p>Unfortuately, due to the nature of my employment during the time I was working with assembly, there is little source code that I solely authored and that I currently have on hand. Of the items I do have access to, the most complicated is still very simple.</p>
 						<p>Still, I have included this section because I found assembly to be extremely enlightening. I think a stint in low-level C or asm is somewhat of a Pilgrimage all programmers should take. The implicit understanding of how code exists in memory and that it is indistinguishable from data alone is worth the undertaking. Of course, you could also learn this through Lisp, but I don't know, the logical respresentation of the processor, its registers, IO calls, etc makes it easy it understand.</p>
@@ -116,6 +116,25 @@
 				</div>
 			</div>
 		</div><!-- end site-container -->
+	<script>
+	$("#oop-link").click(function() {
+
+		// scroll code window to point specified.
+
+		$("#prob-link").click(function() {
+			var fWindow = document.getElementById("juggleFestSource").contentWindow;
+			var fDoc = document.getElementById("juggleFestSource").contentDocument;
+			var topPos = fDoc.getElementById('sortingComment').offsetTop;
+			
+			fWindow.scrollTo(0, topPos);
+		});
+
+		// code window
+		
+});
+
+
+	</script>
 	</body>
 </html>
 

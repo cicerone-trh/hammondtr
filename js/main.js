@@ -1,5 +1,4 @@
 
-
 $(document).ready(function () {
 
 
@@ -40,6 +39,7 @@ $(document).ready(function () {
 			$("#asm").slideUp();
 			$("#web-ex").slideUp();
 			$("#oop").delay(400).slideDown(300);
+			$("#juggleFestSource").attr('src', 'resources/FestivalCoordinator.cs.html');
 		} else {
 			$("#oop").slideUp();
 			$("#eval-intro").delay(400).slideDown(300);
@@ -69,25 +69,6 @@ $(document).ready(function () {
 			$("#eval-intro").delay(400).slideDown(300);
 		}
 	});
-
-	$("#prob-link").click(function() {
-		var childWindow = $("#juggleComment").contentWindow;		
-		childWindow.scrollTo(0,childWindow.document.getElementById('sortingComment').offsetTop);
-	});
-
-	// make code windows appear at the proper line number
-
-/*
-   $("#juggleComment").load(function () {         	
-	var childWindow = $("#juggleComment").contentWindow;
-		childWindow.scrollTo(0,childWindow.document.getElementById('sortingComment').offsetTop);
-	
-   });
-	var childWindow = $("#asm-source").contentWindow;
-	childWindow.scrollTo(0,childWindow.document.getElementById('sortingComment').offsetTop);
-
-*/
-
 });
 
 		 
