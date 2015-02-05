@@ -1,8 +1,0 @@
--- add an icon
--- add actual about content
--- add some things to this.evaluable
-    -- make a link in the this.evaluable to cicerone
--- make it work okay responsively
--- make it look aesthetically pleasing
--- wrap the homepage in php
-

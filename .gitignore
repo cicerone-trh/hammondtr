@@ -1,3 +1,20 @@
+# hey hey, editing the gitignore, look at me go!
+
+# js non-essential resources
+/js/extra/*
+
+# source files used to make html
+/resources/source/*
+
+# images saved for potential later use
+/img/extra/*
+
+# text files representing copy
+/txt/*
+
+# vim open files cause I'm lazy and sometimes don't want to close my stuff
+*.swp
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
