@@ -4,9 +4,44 @@
 		<title>HammondTR - Hub</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/jssor.slider.mini.js"></script>
+
 		<link rel='icon' type='image/png' href='favicon.png' />
+
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Noto+Serif:700italic' rel='stylesheet' type='text/css'>
+
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-59206039-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+
+		<!-- style for code snippets -->
+
+		<style type="text/css">
+		<!--
+		code pre { font-family: monospace; color: #c2c2b0; background-color: #222222; }
+		code span { display: inline-block; }
+		code { font-family: monospace; color: #c2c2b0; background-color: #222222; }
+		.lnr { color: #686858; background-color: #000000; }
+		.Constant { color: #ff9800; }
+		.String { color: #779b70; }
+		.Number { color: #cc8800; }
+		.Comment { color: #707670; font-style: italic; }
+		.Type { color: #7e8aa2; }
+		.Statement { color: #90b0d1; }
+		-->
+		</style>
+		
 	</head>
 
 	<body>
@@ -18,40 +53,66 @@
 			</div>
 			<div id="content">
 				<div id="welcome">
-					<h2>Welcome to my little online home,</h2>
-					<p>Welcome to this developer's humble online home. I rejected the subsidized residences of facebook and the like and foolishly decided to stake out a place of my own.</p>
-					<p>While very bare at the moment, I hope to come up with a nice way of presenting who I am as a person, and who I am as a machine (developer).</p>
+					<h2>Welcome to my humble online home</h2>
+
+					<div id="slider1_container" style="display:inline-block;width: 680px; height: 480px;">
+						<!-- Slides Container -->
+						<div u="slides" style="cursor: move; overflow: hidden; width: 680px; height: 480px;">
+							<div><img u="image" src="img/deskone.jpg" alt="Office" /></div>
+							<div><img u="image" src="img/deskthree.jpg" alt="Desk Three; Hello World" /></div>
+							<div><img u="image" src="img/homethree.jpg" alt="Quanta" /></div>
+						</div>
+					</div>
 				</div>
 				<div id="about-me" class="hidden">
-					<h2><img class="circlePicture" src="img/me.jpg" />Hello, I'm Tyler</h2>
-					<p>Whatup homies, let me tell you a bit about me, why I like programming, and why I like other things. And maybe NOT why I like other things, maybe just the other things I like. If you can't figure out why they're so great then that is okay, you can like other things!</p>
+					<h2><img class="circlePicture left" src="img/me.jpg" />Hello, I'm Tyler</h2>
+					<p>I've written a  few "about me"s, but I really want this one to be good. I'm going to try to express me by expressing some things that I like: I like programming, I like video games, I like driving, and I like emailing people to tell them how much I like their work. When I say I like something, I mean I have a fairly deep passion for it. It's hard to share how I feel about these things, but I'll do my best. </p>
+					<h3>Programming</h3>
+					<p>There is a common thread between each of these subjects, and while hard to pinpoint exactly, I think it has to do with unlimited potential. The world of computer programming is limited only by the human mind's ability to abstract concepts, which coincidentally is the same limit to one's ability to percieve reality; effectively there is no real limit to what one can do with a machine that processes lists. </p>
+					<p>But that's just the romantic part of programming that only rarely makes you swoon; that realization is a clear night, with a new moon in the country and the stars are so vivid you notice the Orion Nebula for the first time.</p>
+					<p>The true romance is the practical nature of the beast: it is an opportunity to build something completely new out of nothing, to really test one's mental craftsmanship.  Indeed, the sort of mental acrobatics required and the satisfaction of having built something that provides tangible results are what make the discipline so enticing. It is a modern-day artisanal profession: the languages and frameworks are the medium from which to shape a functional experience.</p>
+
 				</div>
 				<div id="evaluable" class="hidden">
+
+
+				<!-- alright, plans for this section: 
+					(1) When the Header is clicked on, only then is the iframe loaded
+					(2) Add tabbed source files
+					(3) Make it such that context links affect the contentWindow / scroll to the desired location
+				-->
 					<h2>// presents self as an evaluable construct</h2>
-					<p>This will be a launching point for my cicerone service and an interim way of displaying a few choice examples of things.</p>
+					<div id="eval-intro">
+						<img class="circlePicture right" src="img/keyboard.png" />
+						<p>Following are some examples embodying my aptitude and ability. While most examples are of limited scope, I have both worked in a singular enterprise system hosted on SVN and I have worked with dozens of websites in the span of a week. These examples are used because they hopefully express a tacit understanding of many types of systems.</p>
+						<p>I don't have large amounts of experience with the most popular frameworks -- i.e. AngularJS, Spring, Boost, etc. -- but I am certain I would pick them up very quickly once I started working with them.</p>
+					</div>
 
+					<h3 id="oop-link">OOP & Recursion</h3>
+					<div id="oop" class="hidden">
+						<p>This is a solution to a programming challenge offered by Yodle. The challenge asks you to write a program that sorts out a large number of Jugglers with various attributes and desires such that the best teams perform on the most suited Circuits.
+						Or, you can see how I rephrased it in the comments. <span id="prob-link">(Line 61)</span></p>
+						<iframe src="resources/FestivalCoordinator.cs.html" id="juggleComment"></iframe>
+						<span>[expand]</span>
+						<p>The full problem can be found <a href="resources/JuggleFest.html" target="_blank">here</a>.</p>
+						<p>The key to the problem is the recursive method of sorting them: when a team is full, but you come across another Juggler that is better suited, you have to shuffle that displaced Juggler onto another team. And, that Juggler can displace another one and so on. Thus, a recursive function is the solution:</p>
+					</div>
 
-<p>First, I'd like to talk about this site a little bit. I decided to finally hack something together and decided it would be very simple. I wanted to make something without using any fancy front-end stuff; I understand that there are prettier, more impressive things, but I put this off long enough. If you delve into the source, keep in mind I was trying to have a bit of fun.</p>
+					<h3 id="asm-link">Assembly, Computation, Low-level Logic</h3>
+					<div id="asm" class="hidden">
+						<iframe id="asm-source" src="resources/gtt0.asm.html"></iframe>
+						<span>[expand]</span>
+						<p>Unfortuately, due to the nature of my employment during the time I was working with assembly, there is little source code that I solely authored and that I currently have on hand. Of the items I do have access to, the most complicated is still very simple.</p>
+						<p>Still, I have included this section because I found assembly to be extremely enlightening. I think a stint in low-level C or asm is somewhat of a Pilgrimage all programmers should take. The implicit understanding of how code exists in memory and that it is indistinguishable from data alone is worth the undertaking. Of course, you could also learn this through Lisp, but I don't know, the logical respresentation of the processor, its registers, IO calls, etc makes it easy it understand.</p>
+						<p>With assembly and my foray into SmallTalk, I could really understand the power of abstractions and the power of computation.</p>
+						<p>This program is a calculator that takes inputs and determines the operation to perform. Because it operates on such a low level, there's no definitions of tokens and operations; it's wonderfully simple.</p>
+					</div>
 
-
-
-<h3>Objected Oriented Programming and Recursion</h3>
-
-<p>This is a solution to a programming challenge offered by Yodle. The challenge asks you to write a program that sorts out a large number of Jugglers who have various attributes such that the best teams perform on the most suited Circuits.</p>
-
-<p>The full problem can be found <a href="resources/JuggleFest.html" target="_blank">here</a>.</p>
-
-<p>The key to the problem is the recursive method of sorting them:</p>
-
-<div class="code">
-
-</div>
-
-
-<h3>Assembly  - HP Enterprise Services</h3>
-
-<p>When I originally started my professional career my aspiration was to gain a gestalt understanding of computer programming. The first step was processors and assembly.</p>
-					
+					<h3 id="web-link">Web Development, Server-Client Architecture</h3>
+					<div id="web-ex" class="hidden">
+						<p>CMS's, front-end, all that jazz</p>
+					</div>
+										
 				</div>
 			</div>
 		</div><!-- end site-container -->
