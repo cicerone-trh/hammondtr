@@ -180,10 +180,24 @@ h1, h2, h3 {
 }
 
 #evaluable h3 {
+	padding-left: 2em;
+}
+
+#evaluable li {
+	display: inline-block;
+	font-family: monospace;
+	padding: 4px;
+	margin-bottom: 4px;
+	margin-right: 4px;
+}
+
+#evaluable li.activeLink {
+	background-color: #a03;
+}
+
+#evaluable li, #evaluable h3 {
 	cursor: pointer;
 	background-color: #222;
-	padding-left: 2em;
-
 	border-radius:3px;
 
 	-webkit-transition: background 0.25s ease-in-out;
@@ -193,12 +207,13 @@ h1, h2, h3 {
 	transition: background 0.25s ease-in-out;
 }
 
-#evaluable h3:hover {
+#evaluable li:hover, #evaluable h3:hover {
 	cursor: pointer;
 	background-color: #D3356D;
 /*	background-color: #a03; */
 }
-#evaluable h3:active {
+
+#evaluable li:active, #evaluable h3:active {
 	background-color: #fff;
 }
 
@@ -218,6 +233,11 @@ h1, h2, h3 {
 #content iframe {
 	width: 100%;
 	height: 10em;
+}
+
+.footnote {
+	font-size: 0.75em;
+	font-style: italic;
 }
 
 /*-----------------------------------*\

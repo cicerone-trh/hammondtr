@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>L:\_Projects\hammondtr\resources\source\Program.cs.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="cs">
+<meta name="settings" content="use_css,number_lines">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #c2c2b0; background-color: #222222; }
+body { font-family: monospace; color: #c2c2b0; background-color: #222222; }
+.lnr { color: #686858; background-color: #000000; }
+.Comment { color: #707670; font-style: italic; }
+.String { color: #779b70; }
+.Type { color: #7e8aa2; }
+.Statement { color: #90b0d1; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="lnr"> 1 </span><span class="Statement">using</span> System;
+<span class="lnr"> 2 </span><span class="Statement">using</span> System.Collections.Generic;
+<span class="lnr"> 3 </span>
+<span class="lnr"> 4 </span><span class="Type">namespace</span> JuggleFest
+<span class="lnr"> 5 </span>{
+<span class="lnr"> 6 </span>    <span class="Type">class</span> Program
+<span class="lnr"> 7 </span>    {
+<span class="lnr"> 8 </span>
+<span class="lnr"> 9 </span>        <span class="Type">static</span> <span class="Type">void</span> Main(<span class="Type">string</span>[] args)
+<span class="lnr">10 </span>        {
+<span class="lnr">11 </span>            <span class="Type">string</span> festivalInfo = <span class="String">&quot;jugglefest.txt&quot;</span>;
+<span class="lnr">12 </span>            <span class="Type">string</span> outputFile = <span class="String">&quot;jugglefestTeams.txt&quot;</span>;
+<span class="lnr">13 </span>
+<span class="lnr">14 </span>            FestivalCoordinator juggleFestCoordinator = <span class="Statement">new</span> FestivalCoordinator(festivalInfo);
+<span class="lnr">15 </span>            juggleFestCoordinator.printTeamsToFile(outputFile);
+<span class="lnr">16 </span>        }
+<span class="lnr">17 </span>
+<span class="lnr">18 </span>        <span class="Comment">// calculate a given juggler's affinity for a certain circuit</span>
+<span class="lnr">19 </span>        <span class="Type">static</span> <span class="Type">public</span> <span class="Type">int</span> calcAffinity(Juggler j, Circuit c)
+<span class="lnr">20 </span>        {
+<span class="lnr">21 </span>            <span class="Type">int</span> product =
+<span class="lnr">22 </span>                j.getC() * c.getC() +
+<span class="lnr">23 </span>                j.getE() * c.getE() +
+<span class="lnr">24 </span>                j.getP() * c.getP();
+<span class="lnr">25 </span>            <span class="Statement">return</span> product;
+<span class="lnr">26 </span>        }
+<span class="lnr">27 </span>    }
+<span class="lnr">28 </span>}
+</pre>
+</body>
+</html>

@@ -69,50 +69,77 @@ $(document).ready(function () {
 			$("#eval-intro").delay(400).slideDown(300);
 		}
 	});
+
+
+
+// SOURCE PAGE LINKS
+	// aesthetic
+	$("#evaluable li").click(function() {
+		$(this).addClass("activeLink").siblings().removeClass("activeLink");
+	});
+
+
+	// individual links that need to be turned into a single function
+
+	$("#program-link").click(function() {
+		$("#juggleFestSource").unbind("load");
+		$("#juggleFestSource").attr('src', 'resources/Program.cs.html');
+		$("#juggleFestSource").load(function() {
+			$("#juggleFestSource").contents()
+								  .find("html, body")
+								  .animate({ scrollTop: "100px" }, 'slow');
+		});
+	});
+
+	$("#coord-link").click(function() {
+		$("#juggleFestSource").unbind("load");
+		$("#juggleFestSource").attr('src', 'resources/FestivalCoordinator.cs.html');
+		$("#juggleFestSource").load(function() {
+			$("#juggleFestSource").contents()
+								  .find("html, body")
+								  .animate({ scrollTop: "100px" }, 'slow');
+		});
+	});
+
+	$("#jugg-link").click(function() {
+		$("#juggleFestSource").unbind("load");
+		$("#juggleFestSource").attr('src', 'resources/Juggler.cs.html');
+		$("#juggleFestSource").load(function() {
+			$("#juggleFestSource").contents()
+								  .find("html, body")
+								  .animate({ scrollTop: "100px" }, 'slow');
+		});
+	});
+
+	$("#circ-link").click(function() {
+		$("#juggleFestSource").unbind("load");
+		$("#juggleFestSource").attr('src', 'resources/Circuit.cs.html');
+		$("#juggleFestSource").load(function() {
+			$("#juggleFestSource").contents()
+								  .find("html, body")
+								  .animate({ scrollTop: "100px" }, 'slow');
+		});
+	});
+
+
+	// link scrolling to problem specified	
+	$("#prob-link").click(function() {
+		$("#coord-link").addClass("activeLink").siblings().removeClass("activeLink");
+
+		$("#juggleFestSource").unbind("load");
+		$("#juggleFestSource").attr('src','resources/FestivalCoordinator.cs.html');
+		$("#juggleFestSource").load(function() {
+			$("#juggleFestSource").contents()
+					  			  .find("html, body")
+					  			  .animate({ scrollTop: $("#juggleFestSource").contents().find("#sortingComment").position().top }, 'slow');
+		});
+	});
 });
 
-		 
-
-/* CODE THAT HAS BEEN DISCARDED 
-	 // array of links/content blocks
-	var linkArray = new Array(); 
-
-	linkArray.push({linkid:"#about-link", blockid:"#about-me"});
-	linkArray.push({linkid:"#landing-link", blockid:"#welcome"});
-	linkArray.push({linkid:"#eval-link", blockid:"#evaluable"});
-
-	// onclick events for each link
-	for (var i = 0; i < linkArray.length; i++) {
-		createLink(linkArray, linkArray[i].linkid, linkArray[i].blockid);
-	}
-
-// creates an onclick function to make the associated block visible, others hidden
-
-function createLink(linkArray, linkid, blockid) {
-	$(linkid).click(function() {
+// the code I need is: 
+	// change frame's source
+	// once the source has changed, scroll it to a certain position
 
 
-		// first, hide the other blocks
-		for (var i=0; i < linkArray.length; i++) {
-			if (linkArray[i].linkid != linkid) {						
-				if (!$(linkArray[i].blockid).hasClass("hidden")){	
-					$(linkArray[i].blockid).toggleClass("hidden");
-				}
-			}
-		}
-
-		// if associated blockid is hidden, unhide it
-		if ($(blockid).hasClass("hidden")) { 							
-			$(blockid).toggleClass("hidden");
-		}
-	});
-}
-
-
-
-	$(blockid).slideDown("slow");
-	$(linkArray[i].blockid).slideUp(300);
-
-
-*/
+	 
 

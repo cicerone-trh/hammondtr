@@ -2,45 +2,31 @@
 <html>
 	<head>
 		<title>HammondTR - Hub</title>
+
+
+		<link rel='icon' type='image/png' href='favicon.png' />
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/jssor.slider.mini.js"></script>
 
-		<link rel='icon' type='image/png' href='favicon.png' />
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Noto+Serif:700italic' rel='stylesheet' type='text/css'>
 
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-
 		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-59206039-1', 'auto');
-		  ga('send', 'pageview');
+		// google
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-59206039-1', 'auto');
+		ga('send', 'pageview');
 
 		</script>
-
-
-		<!-- style for code snippets -->
-
-		<style type="text/css">
-		<!--
-		code pre { font-family: monospace; color: #c2c2b0; background-color: #222222; }
-		code span { display: inline-block; }
-		code { font-family: monospace; color: #c2c2b0; background-color: #222222; }
-		.lnr { color: #686858; background-color: #000000; }
-		.Constant { color: #ff9800; }
-		.String { color: #779b70; }
-		.Number { color: #cc8800; }
-		.Comment { color: #707670; font-style: italic; }
-		.Type { color: #7e8aa2; }
-		.Statement { color: #90b0d1; }
-		-->
-		</style>
 		
 	</head>
 
@@ -75,7 +61,6 @@
 				</div>
 				<div id="evaluable" class="hidden">
 
-
 				<!-- alright, plans for this section: 
 					(1) When the Header is clicked on, only then is the iframe loaded
 					(2) Add tabbed source files
@@ -90,12 +75,24 @@
 
 					<h3 id="oop-link">OOP & Recursion</h3>
 					<div id="oop" class="hidden">
+
+					<!-- option: set a data attribute for frame src, makes the script simpler -->
+					<div id="code-container">
+						<span style="float:right"></span>
+						<ul>
+							<li id="program-link">Program.cs</li>
+							<li id="coord-link">FestivalCoordinator.cs</li>
+							<li id="jugg-link">Juggler.cs</li>
+							<li id="circ-link">Circuit.cs</li>
+						</ul>
 						<iframe id="juggleFestSource">Source Code to JuggleFest Challenge</iframe>
-						<p>This is a solution to a programming challenge offered by Yodle. The challenge asks you to write a program that sorts out a large number of Jugglers with various attributes and desires such that the best teams perform on the most suited Circuits.
+					</div><!-- end code-container -->
+						<p>This is a solution to a programming challenge* offered by Yodle. The challenge asks you to write a program that sorts out a large number of Jugglers with various attributes and desires such that the best teams perform on the most suited Circuits.
 						Or, you can see how I rephrased it in the comments: <span id="prob-link" class="frame-link">(Line 61)</span></p>
-						<span>[expand]</span>
-						<p>The full problem can be found <a href="resources/JuggleFest.html" target="_blank">here</a>.</p>
 						<p>The key to the problem is the recursive method of sorting them: when a team is full, but you come across another Juggler that is better suited, you have to shuffle that displaced Juggler onto another team. And, that Juggler can displace another one and so on. Thus, a recursive function is the solution:</p>
+
+						<span class="footnote">*The full problem can be found <a href="resources/JuggleFest.html" target="_blank">here</a>.</span>
+
 					</div>
 
 					<h3 id="asm-link">Assembly, Computation, Low-level Logic</h3>
@@ -117,23 +114,7 @@
 			</div>
 		</div><!-- end site-container -->
 	<script>
-	$("#oop-link").click(function() {
-
-		// scroll code window to point specified.
-
-		$("#prob-link").click(function() {
-			var fWindow = document.getElementById("juggleFestSource").contentWindow;
-			var fDoc = document.getElementById("juggleFestSource").contentDocument;
-			var topPos = fDoc.getElementById('sortingComment').offsetTop;
-			
-			fWindow.scrollTo(0, topPos);
-		});
-
-		// code window
-		
-});
-
-
+	
 	</script>
 	</body>
 </html>
