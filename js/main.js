@@ -38,8 +38,18 @@ $(document).ready(function () {
 			$("#eval-intro").slideUp();
 			$("#asm").slideUp();
 			$("#web-ex").slideUp();
-			$("#oop").delay(400).slideDown(300);
-			$("#juggleFestSource").attr('src', 'resources/FestivalCoordinator.cs.html');
+			$("#oop").delay(400).slideDown(300, function(){
+				$("#program-link").addClass("activeLink").siblings().removeClass("activeLink");
+				$("#juggleFestSource").unbind("load");
+				$("#juggleFestSource").attr('src', 'resources/Program.cs.html');
+				$("#juggleFestSource").load(function() {
+					$("#juggleFestSource").contents()
+										  .find("html, body")
+										  .delay(300)
+										  .animate({ scrollTop: $("#juggleFestSource").contents().find("#main").position().top }, 'slow');
+				})
+			});
+
 		} else {
 			$("#oop").slideUp();
 			$("#eval-intro").delay(400).slideDown(300);
@@ -87,7 +97,7 @@ $(document).ready(function () {
 		$("#juggleFestSource").load(function() {
 			$("#juggleFestSource").contents()
 								  .find("html, body")
-								  .animate({ scrollTop: "100px" }, 'slow');
+					  			  .animate({ scrollTop: $("#juggleFestSource").contents().find("#main").position().top }, 'slow');
 		});
 	});
 

@@ -52,22 +52,31 @@
 				</div>
 				<div id="about-me" class="hidden">
 					<h2><img class="circlePicture left" src="img/me.jpg" />Hello, I'm Tyler</h2>
-					<p>I've written a  few "about me"s, but I really want this one to be good. I'm going to try to express me by expressing some things that I like: I like programming, I like video games, I like driving, and I like emailing people to tell them how much I like their work. When I say I like something, I mean I have a fairly deep passion for it. It's hard to share how I feel about these things, but I'll do my best. </p>
+					<p>I'm terrible at this even though I've done it a dozen times. I'm going to try to express me by expressing some things that I like: I like programming, I like video games, I like driving, and I like emailing people to tell them how much I like their work. When I say I like something, I mean I have a fairly deep passion for it. It's hard to share how I feel about these things, but I'll do my best.</p>
 					<h3>Programming</h3>
-					<p>There is a common thread between each of these subjects, and while hard to pinpoint exactly, I think it has to do with unlimited potential. The world of computer programming is limited only by the human mind's ability to abstract concepts, which coincidentally is the same limit to one's ability to percieve reality; effectively there is no real limit to what one can do with a machine that processes lists. </p>
+					<p>First is the nebulous concept of programming. There are two aspects I can divide my passion into: the abstract, romantic notion of the undefinable limits of computers and the tangible, practical satisfaction of crafting something to accomplish a goal.</p>
+					<p>There is nothing special about a Turing machine in itself. Computers are remarkable because of the human ability to abstract meaning. We set systems up to represent any process we can abstract and a computer can embody that. Further, the only things that 'exist' are relative abstractions that our mind creates. Because of this one to one relationship (reality abstraction : computer abstraction), the only limit to what can be done with a computer is the limits of our perception. Or, more eloquently, anything is possible with a machine that can process lists.</p>
 					<p>But that's just the romantic part of programming that only rarely makes you swoon; that realization is a clear night, with a new moon in the country and the stars are so vivid you notice the Orion Nebula for the first time.</p>
-					<p>The true romance is the practical nature of the beast: it is an opportunity to build something completely new out of nothing, to really test one's mental craftsmanship.  Indeed, the sort of mental acrobatics required and the satisfaction of having built something that provides tangible results are what make the discipline so enticing. It is a modern-day artisanal profession: the languages and frameworks are the medium from which to shape a functional experience.</p>
-
+					<p>The true romance is the practical nature of the beast: it is an opportunity to build something completely new out of nothing, to really test one's mental craftsmanship. Indeed, the sort of mental acrobatics required and the satisfaction of having built something that provides tangible results are what make the discipline so enticing. It is a modern-day artisanal profession: the languages and frameworks are the medium from which to shape a functional experience.</p>
 				</div>
 				<div id="evaluable" class="hidden">
 
 				<!-- alright, plans for this section: 
-					(1) When the Header is clicked on, only then is the iframe loaded
-					(2) Add tabbed source files
-					(3) Make it such that context links affect the contentWindow / scroll to the desired location
+					(x) When the Header is clicked on, only then is the iframe loaded
+					(x) Add tabbed source files
+					(x) Make it such that context links affect the contentWindow / scroll to the desired location
+
+					(4) Create a function that takes (sourcefile, line-number), then loads the iframe there and scrolls it to the line
+						- header should go to Program.cs + main
+					(5) Don't let browser determine font - want to make sure it displays properly in all browsers
+					(6) Expand functionality: take up 100% of body height, allow tabbing through files
+					(7) Clean up explanation of the recursive function and add link
+					(8) Write explanation of encapsulation and proper OO concepts
+					(9) Fix spacing and make it look less cluttered
 				-->
-					<h2>// presents self as an evaluable construct</h2>
 					<div id="eval-intro">
+
+					<h2>// presents self as an evaluable construct</h2>
 						<img class="circlePicture right" src="img/keyboard.png" />
 						<p>Following are some examples embodying my aptitude and ability. While most examples are of limited scope, I have both worked in a singular enterprise system hosted on SVN and I have worked with dozens of websites in the span of a week. These examples are used because they hopefully express a tacit understanding of many types of systems.</p>
 						<p>I don't have large amounts of experience with the most popular frameworks -- i.e. AngularJS, Spring, Boost, etc. -- but I am certain I would pick them up very quickly once I started working with them.</p>
@@ -79,7 +88,8 @@
 					<!-- option: set a data attribute for frame src, makes the script simpler -->
 					<div id="code-container">
 						<span style="float:right"></span>
-						<ul>
+						<h4 style="float:left; margin-right: 4px;">Juggle Fest ::</h4>
+						<ul style="text-align:right">
 							<li id="program-link">Program.cs</li>
 							<li id="coord-link">FestivalCoordinator.cs</li>
 							<li id="jugg-link">Juggler.cs</li>

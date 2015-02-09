@@ -1,0 +1,67 @@
+
+<!-- goal: teach reader about OOP by my example, teach about Front-End by example -->
+<!-- about me: teach reader about the subjects I love, tell them why they're great -->
+<!-- goal: let reader know what I want to work on and under what conditions -->
+
+Hello, I'm Tyler
+<p>I'm terrible at this even though I've done it a dozen times. I'm going to try to express me by expressing some things that I like: I like programming, I like video games, I like driving, and I like emailing people to tell them how much I like their work. When I say I like something, I mean I have a fairly deep passion for it. It's hard to share how I feel about these things, but I'll do my best.</p>
+<h3>Programming</h3>
+<p>First is the nebulous concept of programming. There are two aspects I can divide my passion into: the abstract, romantic notion of the undefinable limits of computers and the tangible, practical satisfaction of crafting something to accomplish a goal.</p>
+<p>There is nothing special about a Turing machine in itself. Computers are remarkable because of the human ability to abstract meaning: our minds are mental models (isomorphisms, formally). We set systems up to represent any process we can abstract and a computer can embody that. Further, the only things that 'exist' are relative abstractions that our mind creates. Because of this one to one relationship (reality abstraction : computer abstraction), the only limit to what can be done with a computer is the limits of our perception. Or, more eloquently, anything is possible with a machine that can process lists.</p>
+<p>But that's just the ephemeral lust of programming that only rarely makes you swoon; that realization is a clear night, with a new moon in the country and you realize how many stars there really are.</p>
+<p>The true romance is the practical nature of the beast: it is an opportunity to build something completely new out of nothing, to really test one's mental craftsmanship. Indeed, the sort of mental acrobatics required and the satisfaction of having built something that provides tangible results are what make the discipline so enticing. It is a modern-day artisanal profession: the languages and frameworks are the medium from which to shape a functional experience.</p>
+<!-- There is a common thread between each of these subjects, and while hard to pinpoint exactly, I think it has to do with unlimited potential. The world of computer programming is limited only by the human mind's ability to abstract concepts, which coincidentally is the same limit to one's ability to percieve reality; effectively there is no real limit to what one can do with a machine that processes lists. -->
+
+Video Games
+While I have always liked video games, the only ones I interact with now are those with a competitive/professional scene. 
+Dota 2 is a complex game. It's complex in that there's no single solution: there are many, many factors that determine whether a game is won or not. In fact, if you're trying to learn to play and get better, you can't even focus on the strategy of winning the game, you need to focus on just maximizing your ability to perform sub-strategies. That is, you should get better at accumulating gold, or you should get better at hero knowledge, or you should get better at map dynamics. Then, after hundreds of hours understanding these basic sub-systems in the game, you can start to determine how games are actually won. 
+Each game, two teams select five characters (out of a bit over a hundred)
+It's like... I enjoy the feeling of being impressed. Almost every single game my understanding of the systems is challenged. In fact, every game it SHOULD be challenged. That is, I am constantly in a state of wonderment. In four years, I have watched at least 500 games and I have played a little less than that, .
+
+
+Driving:
+Driving is perhaps the least suited of these passions to express via text. You just have to live it and understand it; there’s nothing quite like going fast. It's thrilling and it's incredibly easy to get into flow when taking a turn and feeling the limit of your vehicle and riding it. 
+
+My daily driver is a 2004 Honda S2000 and when I purchased it I test drove 20 other vehicles first. Since being 16, I've only owned manual transmission vehicles so that the experience can always be a little more immersive.
+
+Emailing:
+I am not certain exactly why I do this, but I don’t think it’s a sycophantic tendency. I’m not sure. I think rationally, one can deduce it as being that I like the things these people do and I’d love to help motivate them to do more. I’d like to say I just really enjoy expressing my love for people, but that sounds kinda weird.
+
+Anyway, I’m just going to list some examples of who I email. They’re typically praise that I hope they’ll highly value. Kan Gao, for example, was sent after I played A Bird Story: 
+
+(paraphrasing, of course)
+
+“This game does a fantastic job encapsulating the actual experience of being a child. I greatly appreciate it exists and the youth I recalled. I know it doesn’t have a genre yet, so I’m going to suggest ‘Jumping into Puddles Simulator’. Anyway, thanks for making it, I am eagerly anticipating Finding Paradise.”
+
+Kan Gao - Freebird Games
+Terry Cavanaugh - VVVVVV & Super Hexagon
+Pentadact - Games Journalist & Gunpoint
+Maddox - thebestsiteintheuniverse
+Allie Brosh - Hyperbole and a Half
+Randall Munroe - XKCD
+Ashly Burch - Hey Ash, Whatcha Playin’?
+Felicia Day - The Guild, Geek and Sundry
+Melissa Broder - Poet, also the person behind @sosadtoday ;)
+Sean Dunne - Filmmaker, VeryApeProductions 
+Paul Graham - Essays, paulgraham.com
+Richard Stallman - Free Software
+“Icefrog” - Dota 2 lead developer
+Foxes - Singer, Musician
+When I tell people I do these, they usually ask if they write back. The answer is occasionally, but it depends on what I wrote. Like, with RMS I was expressing my joy at the concept of Free Software, that it was a refreshing, revolutionary construct; that it is perfectly ideal and that I struggle with exercising it, but I greatly appreciate the purity of thought. I also asked that, if Fravia was still alive, to say ‘hi’ to him for me. 
+
+RMS is probably the nicest person I’ve met online.
+
+
+I need to do 4 weeks of 4 hours programming a day.
+I need to time myself and I just need to do SOMETHING.
+Every single day.
+I need to spend 30 minutes thinking about finance and making financial decisions.
+
+If I do this, I'm willing to guess I'll be ultra successful in 4 years. By the time I'm 30, I'll have done 4 hours per day for 4 years, or about 6,000 hours. I will be empowered to do anything I want to do with software. Further.
+1 hours per day getting better at understanding games/game.
+-- nature's prophet tp to stack. That hero is boss, you can learn tons of shit. That was three strategies in three games. The dagon, the maelstrom. There are tons and tons of things you can do on this hero. How about 2 hours of nature's prophet a week?
+Why was my mindset so poor before? I was inspired by the article ryon day linked. I wanted to do something.
+
+But the point is. I need to start doing 4 hours a day TODAY. Live in the moment. Do things.
+
+Spend one hour a day thinking about how to make her love me more.
