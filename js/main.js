@@ -1,5 +1,63 @@
+// h3 link function:
+
+function createFamilyLink(linkFamily, linkid, blockid, extra) {
+	$(linkid).click(function() {
+
+		// default zone, header of links
+	
+		// slideup the other blocks; i=0 is default block
+		for (var i=1; i < linkFamily.length; i++) {
+			if (linkFamily[i].linkid != linkid) {
+				$(linkFamily[i].linkid).removeClass("activeLink");
+				$(linkFamily[i].blockid).slideUp();
+			} 
+		}
+
+		// slidedown the targetblock
+		if (!$(blockid).is(":hidden")){
+			$(blockid).slideUp();
+			$(linkid).removeClass("activeLink");
+			$(linkFamily[0].blockid).delay(400).slideDown(300);
+		} else {
+			$(linkFamily[0].blockid).slideUp();
+			$(linkid).addClass("activeLink");
+			$(blockid).delay(400).slideDown(300);
+		}
+
+		// if there's extra functionality, such as code navigation;
+		
+
+	});
+}
+
+
 
 $(document).ready(function () {
+
+
+// about page links:
+	var aboutLinks = [{blockid:"#about-intro"}];
+
+	aboutLinks.push({
+		linkid:"#aprog-link",
+		blockid:"#about-programming"
+	});
+	aboutLinks.push({
+		linkid:"#agame-link",
+		blockid:"#about-games"
+	});
+	aboutLinks.push({
+		linkid:"#adrive-link",
+		blockid:"#about-driving"
+	});
+
+	for (var i=0; i < aboutLinks.length; i++) {
+		createFamilyLink(
+			aboutLinks, 
+			aboutLinks[i].linkid, 
+			aboutLinks[i].blockid
+		);
+	}
 
 
 	var options = { $AutoPlay: true, $FillMode: 4, $SlideDuration: 1000, $AutoPlayInterval: 4000 };

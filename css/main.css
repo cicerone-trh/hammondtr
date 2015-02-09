@@ -95,6 +95,10 @@ h1, h2, h3 {
 	font-family: 'Noto Serif', serif;
 	font-style: italic;
 }
+/* #D3356D; */
+.activeLink {
+	background-color: #D3356D !important;
+}
 
 .frame-link {
 	font-weight: bold;
@@ -105,6 +109,8 @@ h1, h2, h3 {
 .hidden {
 	display: none;
 }
+
+/* TOP NAV SHIT */
 
 #top-nav {
 	margin-top: 2.5em;
@@ -157,6 +163,23 @@ h1, h2, h3 {
 
 /* content portions */
 
+span {
+	font-style: italic;
+}
+
+ul {
+	padding-bottom: 1.25em;
+	padding-left: 1.25em;
+}
+
+li {
+	font-size: 0.75em;
+}
+
+h3 {
+	padding-left: 2em;
+}
+
 #welcome {
 	text-align: center;
 }
@@ -179,23 +202,20 @@ h1, h2, h3 {
 	margin-bottom: 1.5em;
 }
 
-#evaluable h3 {
-	padding-left: 2em;
-}
+
 
 #evaluable li {
 	display: inline-block;
 	font-family: monospace;
+	font-size: 1em;
 	padding: 4px;
 	margin-bottom: 4px;
 	margin-right: 4px;
 }
 
-#evaluable li.activeLink {
-	background-color: #a03;
-}
 
-#evaluable li, #evaluable h3 {
+
+#evaluable li, h3 {
 	cursor: pointer;
 	background-color: #222;
 	border-radius:3px;
@@ -207,13 +227,13 @@ h1, h2, h3 {
 	transition: background 0.25s ease-in-out;
 }
 
-#evaluable li:hover, #evaluable h3:hover {
+#evaluable li:hover, h3:hover {
 	cursor: pointer;
-	background-color: #D3356D;
-/*	background-color: #a03; */
+/*	background-color: #D3356D; */
+	background-color: #a03; 
 }
 
-#evaluable li:active, #evaluable h3:active {
+#evaluable li:active, h3:active {
 	background-color: #fff;
 }
 
