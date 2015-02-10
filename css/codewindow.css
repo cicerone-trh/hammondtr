@@ -1,0 +1,27 @@
+pre {
+	margin:0;
+	font-family: 'Inconsolata', monospace; 
+	font-weight: 400;
+	font-size: 14px;
+	color: #c2c2b0; 
+	background-color: #222222; }
+
+html, body {
+	overflow: hidden;
+}
+
+body { 
+	margin:0;
+	padding:0;
+	font-family: 'Inconsolata', monospace; 
+	color: #c2c2b0; 
+	background-color: #222222; 
+}
+.lnr { color: #686858; background-color: #000000; }
+.Constant { color: #ff9800; }
+.String { color: #779b70; }
+.Number { color: #cc8800; }
+.Comment { color: #707670; font-style: italic; }
+.Type { color: #7e8aa2; }
+.Statement { color: #90b0d1; }
+

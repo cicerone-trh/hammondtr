@@ -1,10 +1,6 @@
-// h3 link function:
 
 function createFamilyLink(linkFamily, linkid, blockid, extra) {
 	$(linkid).click(function() {
-
-		// default zone, header of links
-	
 		// slideup the other blocks; i=0 is default block
 		for (var i=1; i < linkFamily.length; i++) {
 			if (linkFamily[i].linkid != linkid) {
@@ -12,7 +8,6 @@ function createFamilyLink(linkFamily, linkid, blockid, extra) {
 				$(linkFamily[i].blockid).slideUp();
 			} 
 		}
-
 		// slidedown the targetblock
 		if (!$(blockid).is(":hidden")){
 			$(blockid).slideUp();
@@ -21,19 +16,28 @@ function createFamilyLink(linkFamily, linkid, blockid, extra) {
 		} else {
 			$(linkFamily[0].blockid).slideUp();
 			$(linkid).addClass("activeLink");
-			$(blockid).delay(400).slideDown(300);
+			$(blockid).delay(400).slideDown(300, extra);
 		}
-
-		// if there's extra functionality, such as code navigation;
-		
-
 	});
 }
 
-
-
 $(document).ready(function () {
 
+	$("#lock-source").click(function(){
+		// if code-container is locked
+			// expand window to 28em
+			// allow resizing
+			// change child style to be scrollable
+		
+		// if code-container is unlocked
+			// destroy resize
+			// return to regular size
+			// disallow scrolling
+	});
+
+// home page slider:
+	var options = { $AutoPlay: true, $FillMode: 4, $SlideDuration: 1000, $AutoPlayInterval: 4000 };
+    var jssor_slider1 = new $JssorSlider$('slider1_container', options);
 
 // about page links:
 	var aboutLinks = [{blockid:"#about-intro"}];
@@ -55,16 +59,49 @@ $(document).ready(function () {
 		createFamilyLink(
 			aboutLinks, 
 			aboutLinks[i].linkid, 
-			aboutLinks[i].blockid
+			aboutLinks[i].blockid,
+			aboutLinks[i].extra
 		);
 	}
 
+// evaluable page links:
+	var evalLinks = [{blockid:"#eval-intro"}];
 
-	var options = { $AutoPlay: true, $FillMode: 4, $SlideDuration: 1000, $AutoPlayInterval: 4000 };
-    var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+	evalLinks.push({
+		linkid:"#oop-link",
+		blockid:"#oop",
+		extra: function() {
+			$("#program-link").addClass("activeLink").siblings().removeClass("activeLink");
+			$("#juggleFestSource").unbind("load");
+			$("#juggleFestSource").attr('src', 'resources/Program.cs.html');
+			$("#juggleFestSource").load(function() {
+				$("#juggleFestSource").contents()
+									  .find("html, body")
+									  .delay(300)
+									  .animate({ scrollTop: $("#juggleFestSource").contents().find("#main").position().top }, 'slow');
+			})
+		}
+	});
 
-	
-	// onclick events for the top nav buttons
+	evalLinks.push({
+		linkid:"#asm-link",
+		blockid:"#asm"
+	});
+	evalLinks.push({
+		linkid:"#web-link",
+		blockid:"#web-ex"
+	});
+
+	for (var i=0; i < evalLinks.length; i++) {
+		createFamilyLink(
+			evalLinks, 
+			evalLinks[i].linkid, 
+			evalLinks[i].blockid,
+			evalLinks[i].extra
+		);
+	}
+
+// onclick events for the top nav buttons
 
 	$("#about-link").click(function() {
 		$("#evaluable").slideUp();
@@ -83,61 +120,6 @@ $(document).ready(function () {
 		$("#evaluable").slideUp();
 		$("#welcome").delay(400).slideDown(300);
 	});
-
-
-	// eval-intro
-	// asm-link
-	// asm
-	// oop-link, oop
-	// web-link, web-ex
-
-	$("#oop-link").click(function() {
-		if ($("#oop").is(":hidden")) {
-			$("#eval-intro").slideUp();
-			$("#asm").slideUp();
-			$("#web-ex").slideUp();
-			$("#oop").delay(400).slideDown(300, function(){
-				$("#program-link").addClass("activeLink").siblings().removeClass("activeLink");
-				$("#juggleFestSource").unbind("load");
-				$("#juggleFestSource").attr('src', 'resources/Program.cs.html');
-				$("#juggleFestSource").load(function() {
-					$("#juggleFestSource").contents()
-										  .find("html, body")
-										  .delay(300)
-										  .animate({ scrollTop: $("#juggleFestSource").contents().find("#main").position().top }, 'slow');
-				})
-			});
-
-		} else {
-			$("#oop").slideUp();
-			$("#eval-intro").delay(400).slideDown(300);
-		}
-	});
-
-	$("#asm-link").click(function() {
-		if ($("#asm").is(":hidden")) {
-			$("#eval-intro").slideUp();
-			$("#oop").slideUp();
-			$("#web-ex").slideUp();
-			$("#asm").delay(400).slideDown(300);
-		} else {
-			$("#asm").slideUp();
-			$("#eval-intro").delay(400).slideDown(300);
-		}
-	});
-
-	$("#web-link").click(function() {
-		if ($("#web-ex").is(":hidden")) {
-			$("#eval-intro").slideUp();
-			$("#asm").slideUp();
-			$("#oop").slideUp();
-			$("#web-ex").delay(400).slideDown(300);
-		} else {
-			$("#web-ex").slideUp();
-			$("#eval-intro").delay(400).slideDown(300);
-		}
-	});
-
 
 
 // SOURCE PAGE LINKS

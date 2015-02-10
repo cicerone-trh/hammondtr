@@ -7,13 +7,17 @@
 		<link rel='icon' type='image/png' href='favicon.png' />
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		
 		<script src="js/main.js"></script>
 		<script src="js/jssor.slider.mini.js"></script>
 
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />	
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Noto+Serif:700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
 		<script>
 
@@ -82,22 +86,7 @@
 	
 				</div>
 				<div id="evaluable" class="hidden">
-
-				<!-- alright, plans for this section: 
-					(x) When the Header is clicked on, only then is the iframe loaded
-					(x) Add tabbed source files
-					(x) Make it such that context links affect the contentWindow / scroll to the desired location
-
-					(4) Create a function that takes (sourcefile, line-number), then loads the iframe there and scrolls it to the line
-						- header should go to Program.cs + main
-					(5) Don't let browser determine font - want to make sure it displays properly in all browsers
-					(6) Expand functionality: take up 100% of body height, allow tabbing through files
-					(7) Clean up explanation of the recursive function and add link
-					(8) Write explanation of encapsulation and proper OO concepts
-					(9) Fix spacing and make it look less cluttered
-				-->
 					<div id="eval-intro">
-
 					<h2>// presents self as an evaluable construct</h2>
 						<img class="circlePicture right" src="img/keyboard.png" />
 						<p>Following are some examples embodying my aptitude and ability. While most examples are of limited scope, I have both worked in a singular enterprise system hosted on SVN and I have worked with dozens of websites in the span of a week. These examples are used because they hopefully express a tacit understanding of many types of systems.</p>
@@ -106,25 +95,26 @@
 
 					<h3 id="oop-link">OOP & Recursion</h3>
 					<div id="oop" class="hidden">
-
 					<!-- option: set a data attribute for frame src, makes the script simpler -->
 					<div id="code-container">
-						<span style="float:right"></span>
-						<h4 style="float:left; margin-right: 4px;">Juggle Fest ::</h4>
-						<ul style="text-align:right">
+						<div class="code-header">
+						<h4>Juggle Fest ::</h4>
+										<ul>
 							<li id="program-link">Program.cs</li>
 							<li id="coord-link">FestivalCoordinator.cs</li>
 							<li id="jugg-link">Juggler.cs</li>
 							<li id="circ-link">Circuit.cs</li>
 						</ul>
+						<span id="lock-source"><img src="img/lock_cc.svg" /></span>
+						</div>	
 						<iframe id="juggleFestSource">Source Code to JuggleFest Challenge</iframe>
 					</div><!-- end code-container -->
-						<p>This is a solution to a programming challenge* offered by Yodle. The challenge asks you to write a program that sorts out a large number of Jugglers with various attributes and desires such that the best teams perform on the most suited Circuits.
-						Or, you can see how I rephrased it in the comments: <span id="prob-link" class="frame-link">(Line 61)</span></p>
-						<p>The key to the problem is the recursive method of sorting them: when a team is full, but you come across another Juggler that is better suited, you have to shuffle that displaced Juggler onto another team. And, that Juggler can displace another one and so on. Thus, a recursive function is the solution:</p>
-
-						<span class="footnote">*The full problem can be found <a href="resources/JuggleFest.html" target="_blank">here</a>.</span>
-
+					<div id="code-explain">
+						<p>This is a solution to a programming challenge<a target="_blank" href="resources/JuggleFest.html">*</a> offered by Yodle. In short, the challenge asks you to write a program that sorts out a large number of Jugglers based on various attributes and desires such that the best teams perform on their most desired Circuits. Or, you can see how I rephrased it in the comments: <span id="prob-link" class="frame-link">(FestivalCoordinator, Line 61)</span></p>
+						<p>As previously stated, these examples are of limited scope. If this program used polymorphic behaviors on inherited classes it would be overly complex. Example, the Coordinator could operate on a "person" and "juggler" could be a type of person, but that's pointlessly complex (and definitely not agile). </p>
+						<p>That said, because of proper encapsulation and sensible object divisions, it would be fairly easy to change this functionality. Maybe the Coordinator has to coordinate "Jugglers" and "Bowlers", in that case it might be better to have an "Athlete" class.</p>
+						<p>The key to solving the sorting problem is recursion: when a team is full, but you come across another Juggler that is better suited, you have to shuffle that displaced Juggler onto another team. That Juggler can displace another and so on. Thus, a recursive function is the solution: <span id="recursive-link" class="frame-link">(FestivalCoordinator, line 114)</span></p>
+					</div>
 					</div>
 
 					<h3 id="asm-link">Assembly, Computation, Low-level Logic</h3>

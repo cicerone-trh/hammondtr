@@ -198,21 +198,45 @@ h3 {
 
 }
 
+.code-header {
+	text-align: right;
+}
+
+.code-header h4 {
+	float: left;
+}
+
+#lock-source {
+	margin-top: 0px;
+	padding-top: 4px;
+	cursor: pointer;
+	display: inline;
+	height: 100%;
+	line-height: 100%;
+}
+
+#lock-source img {
+	cursor: pointer;
+}
+
+
 #eval-intro {
 	margin-bottom: 1.5em;
 }
 
-
-
-#evaluable li {
+#evaluable ul {
+	margin-bottom: 0em;
+	padding-bottom: 0em;
 	display: inline-block;
-	font-family: monospace;
-	font-size: 1em;
-	padding: 4px;
-	margin-bottom: 4px;
-	margin-right: 4px;
 }
 
+#evaluable li {
+	display: inline;
+	font-family: 'Inconsolata', monospace;
+	font-size: 1em;
+	padding: 4px;
+	margin-right: 4px;
+}
 
 
 #evaluable li, h3 {
@@ -252,7 +276,8 @@ h3 {
 
 #content iframe {
 	width: 100%;
-	height: 10em;
+	height: 100%;
+	margin-bottom: 0.75em;
 }
 
 .footnote {
