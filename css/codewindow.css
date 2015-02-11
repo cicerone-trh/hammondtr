@@ -7,7 +7,7 @@ pre {
 	background-color: #222222; }
 
 html, body {
-	overflow: hidden;
+/*	overflow: hidden; */
 }
 
 body { 
@@ -24,4 +24,6 @@ body {
 .Comment { color: #707670; font-style: italic; }
 .Type { color: #7e8aa2; }
 .Statement { color: #90b0d1; }
+
+
 

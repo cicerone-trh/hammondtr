@@ -9,11 +9,10 @@
 <meta name="settings" content="use_css,number_lines">
 <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="../css/codewindow.css">
-
 </head>
 <body>
 <pre>
-<span class="lnr">  1 </span>﻿<span class="Statement">using</span> System;
+<span class="lnr">  1 </span><span class="Statement">using</span> System;
 <span class="lnr">  2 </span><span class="Statement">using</span> System.Collections.Generic;
 <span class="lnr">  3 </span>
 <span class="lnr">  4 </span><span class="Type">namespace</span> JuggleFest
@@ -108,28 +107,27 @@
 <span class="lnr"> 93 </span>
 <span class="lnr"> 94 </span>        <span class="Type">public</span> <span class="Type">string</span> displayTeam()
 <span class="lnr"> 95 </span>        {
-<span class="lnr"> 96 </span>            <span class="Comment">/* </span>
+<span class="lnr"> 96 </span>            <span class="Comment">/* YODLE INSTRUCTIONS:</span>
 <span class="lnr"> 97 </span><span class="Comment">             * Each line should contain the circuit name followed by the juggler name, </span>
-<span class="lnr"> 98 </span><span class="Comment">             * followed by that juggler’s circuits in order of preference and the match score for that circuit. </span>
-<span class="lnr"> 99 </span><span class="Comment">             * The line should include all jugglers matched to the circuit. The example below is a valid assignment </span>
-<span class="lnr">100 </span><span class="Comment">             * for the input file above.</span>
-<span class="lnr">101 </span><span class="Comment">            */</span>
-<span class="lnr">102 </span>
-<span class="lnr">103 </span>            <span class="Type">string</span> output = id + <span class="String">&quot; &quot;</span>;    <span class="Comment">// &quot;CX&quot;</span>
-<span class="lnr">104 </span>
-<span class="lnr">105 </span>            List&lt;<span class="Type">string</span>&gt; jugglerInfos = <span class="Statement">new</span> List&lt;<span class="Type">string</span>&gt;();
-<span class="lnr">106 </span>            <span class="Statement">foreach</span> (Juggler juggler <span class="Statement">in</span> team)
-<span class="lnr">107 </span>            {
-<span class="lnr">108 </span>                <span class="Comment">// add juggler name and scores for preferences</span>
-<span class="lnr">109 </span>                jugglerInfos.Add(juggler.displaySelf());
-<span class="lnr">110 </span>            }
-<span class="lnr">111 </span>
-<span class="lnr">112 </span>            output += <span class="Type">string</span>.Join(<span class="String">&quot;,&quot;</span>, jugglerInfos);
-<span class="lnr">113 </span>
-<span class="lnr">114 </span>            <span class="Statement">return</span> output;
-<span class="lnr">115 </span>        }
-<span class="lnr">116 </span>    }
-<span class="lnr">117 </span>}
+<span class="lnr"> 98 </span><span class="Comment">             * followed by that juggler's circuits in order of preference and the match score </span>
+<span class="lnr"> 99 </span><span class="Comment">             * for that circuit. The line should include all jugglers matched to the circuit. </span>
+<span class="lnr">100 </span><span class="Comment">             */</span>
+<span class="lnr">101 </span>
+<span class="lnr">102 </span>            <span class="Type">string</span> output = id + <span class="String">&quot; &quot;</span>;    <span class="Comment">// &quot;CX&quot;</span>
+<span class="lnr">103 </span>
+<span class="lnr">104 </span>            List&lt;<span class="Type">string</span>&gt; jugglerInfos = <span class="Statement">new</span> List&lt;<span class="Type">string</span>&gt;();
+<span class="lnr">105 </span>            <span class="Statement">foreach</span> (Juggler juggler <span class="Statement">in</span> team)
+<span class="lnr">106 </span>            {
+<span class="lnr">107 </span>                <span class="Comment">// add juggler name and scores for preferences</span>
+<span class="lnr">108 </span>                jugglerInfos.Add(juggler.displaySelf());
+<span class="lnr">109 </span>            }
+<span class="lnr">110 </span>
+<span class="lnr">111 </span>            output += <span class="Type">string</span>.Join(<span class="String">&quot;,&quot;</span>, jugglerInfos);
+<span class="lnr">112 </span>
+<span class="lnr">113 </span>            <span class="Statement">return</span> output;
+<span class="lnr">114 </span>        }
+<span class="lnr">115 </span>    }
+<span class="lnr">116 </span>}
 </pre>
 </body>
 </html>

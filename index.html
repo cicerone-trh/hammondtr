@@ -7,12 +7,10 @@
 		<link rel='icon' type='image/png' href='favicon.png' />
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 		
 		<script src="js/main.js"></script>
 		<script src="js/jssor.slider.mini.js"></script>
 
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />	
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -64,6 +62,7 @@
 					<div id="about-programming" class="hidden">
 					<p>First is the nebulous concept of programming. There are two aspects I can divide my passion into: the abstract, romantic notion of the undefinable limits of computers and the tangible, practical satisfaction of crafting something to accomplish a goal.</p>
 					<p>There is nothing special about a Turing machine in itself. Computers are remarkable because of the human ability to abstract meaning. We set systems up to represent any process we can abstract and a computer can embody that. Further, the only things that 'exist' are relative abstractions that our mind creates. Because of this one to one relationship (reality abstraction : computer abstraction), the only limit to what can be done with a computer is the limits of our perception. Or, more eloquently, anything is possible with a machine that can process lists.</p>
+					<p>Another way to put it is: everything we know about the world is a model. Computers can embody any model we imagine. Thus, computers are capable of anything.</p>
 					<p>But that's just the romantic part of programming that only rarely makes you swoon; that realization is a clear night, with a new moon in the country and the stars are so vivid you notice the Orion Nebula for the first time.</p>
 					<p>The true romance is the practical nature of the beast: it is an opportunity to build something completely new out of nothing, to really test one's mental craftsmanship. Indeed, the sort of mental acrobatics required and the satisfaction of having built something that provides tangible results are what make the discipline so enticing. It is a modern-day artisanal profession: the languages and frameworks are the medium from which to shape a functional experience.</p>
 					<p>It's the satisfaction of getting something working just like you wanted it to, when the pieces all come together and you just want to play with it.</p>
@@ -93,7 +92,7 @@
 						<p>I don't have large amounts of experience with the most popular frameworks -- i.e. AngularJS, Spring, Boost, etc. -- but I am certain I would pick them up very quickly once I started working with them.</p>
 					</div>
 
-					<h3 id="oop-link">OOP & Recursion</h3>
+					<h3 id="oop-link">OOP &amp; Recursion</h3>
 					<div id="oop" class="hidden">
 					<!-- option: set a data attribute for frame src, makes the script simpler -->
 					<div id="code-container">
@@ -105,31 +104,65 @@
 							<li id="jugg-link">Juggler.cs</li>
 							<li id="circ-link">Circuit.cs</li>
 						</ul>
-						<span id="lock-source"><img src="img/lock_cc.svg" /></span>
 						</div>	
 						<iframe id="juggleFestSource">Source Code to JuggleFest Challenge</iframe>
 					</div><!-- end code-container -->
 					<div id="code-explain">
 						<p>This is a solution to a programming challenge<a target="_blank" href="resources/JuggleFest.html">*</a> offered by Yodle. In short, the challenge asks you to write a program that sorts out a large number of Jugglers based on various attributes and desires such that the best teams perform on their most desired Circuits. Or, you can see how I rephrased it in the comments: <span id="prob-link" class="frame-link">(FestivalCoordinator, Line 61)</span></p>
 						<p>As previously stated, these examples are of limited scope. If this program used polymorphic behaviors on inherited classes it would be overly complex. Example, the Coordinator could operate on a "person" and "juggler" could be a type of person, but that's pointlessly complex (and definitely not agile). </p>
-						<p>That said, because of proper encapsulation and sensible object divisions, it would be fairly easy to change this functionality. Maybe the Coordinator has to coordinate "Jugglers" and "Bowlers", in that case it might be better to have an "Athlete" class.</p>
-						<p>The key to solving the sorting problem is recursion: when a team is full, but you come across another Juggler that is better suited, you have to shuffle that displaced Juggler onto another team. That Juggler can displace another and so on. Thus, a recursive function is the solution: <span id="recursive-link" class="frame-link">(FestivalCoordinator, line 114)</span></p>
+						<p>That said, because of proper encapsulation and sensible object divisions, it would be fairly easy to change this functionality. Maybe the Coordinator has to coordinate "Jugglers" and "Bowlers", in that case it might be better to have an "Athlete" class; you wouldn't need to change the function names from Juggler, and thus the Coordinator wouldn't have to change very much.</p>
+						<p>Next, the key to solving the sorting problem is recursion: when a team is full, but you come across another Juggler that is better suited, you have to shuffle that displaced Juggler onto another team. That Juggler can displace another and so on. Thus, a recursive function is the solution: <span id="recursive-link" class="frame-link">(FestivalCoordinator, line 114)</span></p>
 					</div>
 					</div>
 
-					<h3 id="asm-link">Assembly, Computation, Low-level Logic</h3>
+					<h3 id="asm-link">Assembly &amp; Computation</h3>
 					<div id="asm" class="hidden">
 						<iframe id="asm-source"></iframe>
-						<span>[expand]</span>
 						<p>Unfortuately, due to the nature of my employment during the time I was working with assembly, there is little source code that I solely authored and that I currently have on hand. Of the items I do have access to, the most complicated is still very simple.</p>
 						<p>Still, I have included this section because I found assembly to be extremely enlightening. I think a stint in low-level C or asm is somewhat of a Pilgrimage all programmers should take. The implicit understanding of how code exists in memory and that it is indistinguishable from data alone is worth the undertaking. Of course, you could also learn this through Lisp, but I don't know, the logical respresentation of the processor, its registers, IO calls, etc makes it easy it understand.</p>
 						<p>With assembly and my foray into SmallTalk, I could really understand the power of abstractions and the power of computation.</p>
 						<p>This program is a calculator that takes inputs and determines the operation to perform. Because it operates on such a low level, there's no definitions of tokens and operations; it's wonderfully simple.</p>
 					</div>
 
-					<h3 id="web-link">Web Development, Server-Client Architecture</h3>
+					<h3 id="web-link">Web Development</h3>
 					<div id="web-ex" class="hidden">
-						<p>CMS's, front-end, all that jazz</p>
+						<style>
+							#web-ex img {
+								border: 1px solid #000;
+								width: 100%;
+								cursor: pointer;
+							}
+						</style>
+						<div class="grid">
+							<div id="a-preview" class="unit one-of-three"><img src="img/hammondtr_thumb.png" /></div>
+							<div id="b-preview" class="unit one-of-three"><img src="img/ambler_thumb.png" /></div>
+							<div id="c-preview" class="unit one-of-three"><img src="img/trustedfuel_thumb.png" /></div>
+						</div>
+						<div id="example-explain">
+							<div id="example-overview">
+								<p>These are a few examples of sites I've worked on. Unfortunately, you won't be able to view any back-end code. This is for two reasons, the first being that a large amount of my experience was with WordPress and PyroCMS, meaning the code-snippets existed in a database and not as a flat file. The other is the websites don't belong to me. That said, I will make sure that my next personal project has some back-end magic to showoff.</p>
+							</div>
+							<div id="a-example" class="hidden">
+							<h4>hammondtr.net</h4>
+							<p>This site is 100% front-end and all running code can be found through view source. It is animated with a combination of jQuery and CSS3. While I understand people generally prefer to scroll rather than to click, I personally enjoy clicking buttons. If you prefer a scrolling site, you can try out the mobile version.</p>
+							<p>My favorite part is the code window and its navigation. It is implemented with an iframe and html files generated with VIM's :tohtml function. In order to manipulate the iframe I've written a function "setSourceWindow" that takes an iframe element, a uri, and an optional integer as arguments. </p>
+							<p>The function creates a jQuery selector for the line-number, loads the resource if needed, and then uses a jQuery function to scroll the page to the selector. It's simple, but I really like the effect.</p>
+
+							</div>
+							<div id="b-example" class="hidden">
+								<h4>Ambler Architects</h4>
+								<p>I wrote this site during my time working with PDG+Creative. This was my first site with the company that I implemented completely. It uses PyroCMS. Important to note that I did not design the site, and the inability for the front page to fit on any but the largest screens was a concern I voiced but everyone (designer, client) wanted it like that.</p>
+							</div>
+							<div id="c-example" class="hidden">
+								<h4>Phillips 66 Aviation Fuels</h4>
+<p>You're just going to have to take my word for this one. This is temporary until I have my personal project up and it serves to represent my back-end experience.</p>
+
+<p>For this site, I was tasked with creating systems that (1) kept track of membership dues and (2) allowed admins to create Safety Classes that members could sign up for (as well as a bunch of lesser things).</p>
+
+<p>The back-end for this site is an in-house CMS called "Caffeine".</p>
+								
+							</div>
+						</div>
 					</div>
 										
 				</div>

@@ -1,45 +1,35 @@
-
-function createFamilyLink(linkFamily, linkid, blockid, extra) {
-	$(linkid).click(function() {
-		// slideup the other blocks; i=0 is default block
-		for (var i=1; i < linkFamily.length; i++) {
-			if (linkFamily[i].linkid != linkid) {
-				$(linkFamily[i].linkid).removeClass("activeLink");
-				$(linkFamily[i].blockid).slideUp();
-			} 
-		}
-		// slidedown the targetblock
-		if (!$(blockid).is(":hidden")){
-			$(blockid).slideUp();
-			$(linkid).removeClass("activeLink");
-			$(linkFamily[0].blockid).delay(400).slideDown(300);
-		} else {
-			$(linkFamily[0].blockid).slideUp();
-			$(linkid).addClass("activeLink");
-			$(blockid).delay(400).slideDown(300, extra);
-		}
-	});
-}
-
 $(document).ready(function () {
 
-	$("#lock-source").click(function(){
-		// if code-container is locked
-			// expand window to 28em
-			// allow resizing
-			// change child style to be scrollable
-		
-		// if code-container is unlocked
-			// destroy resize
-			// return to regular size
-			// disallow scrolling
+/**************************************
+ * top nav functionality:
+ *************************************/
+	$("#about-link").click(function() {
+		$("#evaluable").slideUp();
+		$("#welcome").slideUp();
+		$("#about-me").delay(400).slideDown(300);
 	});
 
-// home page slider:
+	$("#eval-link").click(function() {
+		$("#about-me").slideUp();
+		$("#welcome").slideUp();
+		$("#evaluable").delay(400).slideDown(300);
+	});
+
+	$("#landing-link").click(function() {
+		$("#about-me").slideUp();
+		$("#evaluable").slideUp();
+		$("#welcome").delay(400).slideDown(300);
+	});
+
+/**************************************
+ * home page slider:
+ *************************************/
 	var options = { $AutoPlay: true, $FillMode: 4, $SlideDuration: 1000, $AutoPlayInterval: 4000 };
     var jssor_slider1 = new $JssorSlider$('slider1_container', options);
 
-// about page links:
+/**************************************
+ * about page links:
+ *************************************/
 	var aboutLinks = [{blockid:"#about-intro"}];
 
 	aboutLinks.push({
@@ -64,7 +54,9 @@ $(document).ready(function () {
 		);
 	}
 
-// evaluable page links:
+/**************************************
+ * evaluable h3 links:
+ *************************************/
 	var evalLinks = [{blockid:"#eval-intro"}];
 
 	evalLinks.push({
@@ -82,10 +74,12 @@ $(document).ready(function () {
 			})
 		}
 	});
-
 	evalLinks.push({
 		linkid:"#asm-link",
-		blockid:"#asm"
+		blockid:"#asm",
+		extra: function() {
+			$("#asm-source").attr('src', 'resources/gtt0.asm.html');
+		}
 	});
 	evalLinks.push({
 		linkid:"#web-link",
@@ -101,95 +95,118 @@ $(document).ready(function () {
 		);
 	}
 
-// onclick events for the top nav buttons
-
-	$("#about-link").click(function() {
-		$("#evaluable").slideUp();
-		$("#welcome").slideUp();
-		$("#about-me").delay(400).slideDown(300);
-	});
-
-	$("#eval-link").click(function() {
-		$("#about-me").slideUp();
-		$("#welcome").slideUp();
-		$("#evaluable").delay(400).slideDown(300);
-	});
-
-	$("#landing-link").click(function() {
-		$("#about-me").slideUp();
-		$("#evaluable").slideUp();
-		$("#welcome").delay(400).slideDown(300);
-	});
-
-
-// SOURCE PAGE LINKS
-	// aesthetic
+/**************************************
+ * OOP source code links:
+ *************************************/
+	// this is really bad. And also the changing active based on in-line. I'm aware.
 	$("#evaluable li").click(function() {
 		$(this).addClass("activeLink").siblings().removeClass("activeLink");
 	});
 
-
-	// individual links that need to be turned into a single function
-
+	// individual source files
 	$("#program-link").click(function() {
-		$("#juggleFestSource").unbind("load");
-		$("#juggleFestSource").attr('src', 'resources/Program.cs.html');
-		$("#juggleFestSource").load(function() {
-			$("#juggleFestSource").contents()
-								  .find("html, body")
-					  			  .animate({ scrollTop: $("#juggleFestSource").contents().find("#main").position().top }, 'slow');
-		});
+		setSourceWindow('#juggleFestSource','resources/Program.cs.html');
 	});
 
 	$("#coord-link").click(function() {
-		$("#juggleFestSource").unbind("load");
-		$("#juggleFestSource").attr('src', 'resources/FestivalCoordinator.cs.html');
-		$("#juggleFestSource").load(function() {
-			$("#juggleFestSource").contents()
-								  .find("html, body")
-								  .animate({ scrollTop: "100px" }, 'slow');
-		});
+		setSourceWindow('#juggleFestSource','resources/FestivalCoordinator.cs.html');
 	});
 
 	$("#jugg-link").click(function() {
-		$("#juggleFestSource").unbind("load");
-		$("#juggleFestSource").attr('src', 'resources/Juggler.cs.html');
-		$("#juggleFestSource").load(function() {
-			$("#juggleFestSource").contents()
-								  .find("html, body")
-								  .animate({ scrollTop: "100px" }, 'slow');
-		});
+		setSourceWindow('#juggleFestSource','resources/Juggler.cs.html');
 	});
 
 	$("#circ-link").click(function() {
-		$("#juggleFestSource").unbind("load");
-		$("#juggleFestSource").attr('src', 'resources/Circuit.cs.html');
-		$("#juggleFestSource").load(function() {
-			$("#juggleFestSource").contents()
-								  .find("html, body")
-								  .animate({ scrollTop: "100px" }, 'slow');
-		});
+		setSourceWindow('#juggleFestSource','resources/Circuit.cs.html');
 	});
 
-
-	// link scrolling to problem specified	
+	// in-line links	
 	$("#prob-link").click(function() {
 		$("#coord-link").addClass("activeLink").siblings().removeClass("activeLink");
-
-		$("#juggleFestSource").unbind("load");
-		$("#juggleFestSource").attr('src','resources/FestivalCoordinator.cs.html');
-		$("#juggleFestSource").load(function() {
-			$("#juggleFestSource").contents()
-					  			  .find("html, body")
-					  			  .animate({ scrollTop: $("#juggleFestSource").contents().find("#sortingComment").position().top }, 'slow');
-		});
+		setSourceWindow('#juggleFestSource','resources/FestivalCoordinator.cs.html', 53);
 	});
+
+	$("#recursive-link").click(function() {
+		$("#coord-link").addClass("activeLink").siblings().removeClass("activeLink");
+		setSourceWindow('#juggleFestSource','resources/FestivalCoordinator.cs.html', 112);
+	});
+
+/**************************************
+ * web dev links:
+ *************************************/
+
+	var webLinks = [{blockid:"#example-overview"}];
+
+	webLinks.push({
+		linkid:"#a-preview",
+		blockid:"#a-example"
+	});
+	webLinks.push({
+		linkid:"#b-preview",
+		blockid:"#b-example"
+	});
+	webLinks.push({
+		linkid:"#c-preview",
+		blockid:"#c-example"
+	});
+
+	for (var i=0; i < webLinks.length; i++) {
+		createFamilyLink(
+			webLinks, 
+			webLinks[i].linkid, 
+			webLinks[i].blockid,
+			webLinks[i].extra
+		);
+	}
+
 });
 
-// the code I need is: 
-	// change frame's source
-	// once the source has changed, scroll it to a certain position
+function setSourceWindow(sourceFrame, file, line) {
+	var targetLine = "html,body";
 
+	if (line) {
+		// $("span[class*='lnr']:contains(line)");
+		targetLine = "span[class*='lnr']:contains('" + line + "')";
+	}
 
-	 
+	// if src is same as current, don't reload, just scroll
+	if ($(sourceFrame).attr('src') == file) {
+		$(sourceFrame).contents()
+						  .find("html, body")
+						  .animate({ scrollTop: $(sourceFrame).contents()
+															  .find(targetLine)
+															  .position().top }, 'slow');
+	} else {
+		$(sourceFrame).unbind("load");
+		$(sourceFrame).attr('src', file);
+		$(sourceFrame).load(function() {
+			$(sourceFrame).contents()
+						  .find("html, body")
+						  .animate({ scrollTop: $(sourceFrame).contents()
+															  .find(targetLine)
+															  .position().top }, 'slow');
+		});	
+	}
+}
 
+function createFamilyLink(linkFamily, linkid, blockid, extra) {
+	$(linkid).click(function() {
+		// slideup the other blocks; i=0 is default block
+		for (var i=1; i < linkFamily.length; i++) {
+			if (linkFamily[i].linkid != linkid) {
+				$(linkFamily[i].linkid).removeClass("activeLink");
+				$(linkFamily[i].blockid).slideUp();
+			} 
+		}
+		// slidedown the targetblock
+		if (!$(blockid).is(":hidden")){
+			$(blockid).slideUp();
+			$(linkid).removeClass("activeLink");
+			$(linkFamily[0].blockid).delay(400).slideDown(300);
+		} else {
+			$(linkFamily[0].blockid).slideUp();
+			$(linkid).addClass("activeLink");
+			$(blockid).delay(400).slideDown(300, extra);
+		}
+	});
+}
