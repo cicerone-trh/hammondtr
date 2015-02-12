@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+	
 /**************************************
  * top nav functionality:
  *************************************/
@@ -7,12 +7,14 @@ $(document).ready(function () {
 		$("#evaluable").slideUp();
 		$("#welcome").slideUp();
 		$("#about-me").delay(400).slideDown(300);
+		resetLinkFamily(aboutLinks);
 	});
 
 	$("#eval-link").click(function() {
 		$("#about-me").slideUp();
 		$("#welcome").slideUp();
 		$("#evaluable").delay(400).slideDown(300);
+		resetLinkFamily(evalLinks);
 	});
 
 	$("#landing-link").click(function() {
@@ -24,7 +26,7 @@ $(document).ready(function () {
 /**************************************
  * home page slider:
  *************************************/
-	var options = { $AutoPlay: true, $FillMode: 4, $SlideDuration: 1000, $AutoPlayInterval: 4000 };
+	var options = { $AutoPlay: true, $FillMode: 4, $SlideDuration: 1500, $AutoPlayInterval: 2500 };
     var jssor_slider1 = new $JssorSlider$('slider1_container', options);
 
 /**************************************
@@ -38,7 +40,7 @@ $(document).ready(function () {
 	});
 	aboutLinks.push({
 		linkid:"#agame-link",
-		blockid:"#about-games"
+		blockid:"#about-games",
 	});
 	aboutLinks.push({
 		linkid:"#adrive-link",
@@ -159,7 +161,7 @@ $(document).ready(function () {
 		);
 	}
 
-});
+}); // end document onload
 
 function setSourceWindow(sourceFrame, file, line) {
 	var targetLine = "html,body";
@@ -209,4 +211,12 @@ function createFamilyLink(linkFamily, linkid, blockid, extra) {
 			$(blockid).delay(400).slideDown(300, extra);
 		}
 	});
+}
+
+function resetLinkFamily(linkFamily) {
+	for (var i=1; i < linkFamily.length; i++) {
+		$(linkFamily[i].linkid).removeClass("activeLink");
+		$(linkFamily[i].blockid).slideUp();
+	}
+	$(linkFamily[0].blockid).delay(400).slideDown(300);
 }

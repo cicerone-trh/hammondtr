@@ -95,9 +95,44 @@ h1, h2, h3 {
 	font-family: 'Noto Serif', serif;
 	font-style: italic;
 }
-/* #D3356D; */
+
+a {
+	color: #fff;
+}
+
+a:visited {
+	color: #fff;
+}
+
+span {
+	font-style: italic;
+}
+
+ul {
+	padding-bottom: 1.25em;
+	padding-left: 1.25em;
+}
+
+li {
+	font-size: 0.75em;
+}
+
+h3 {
+	padding-left: 2em;
+}
+
+/* FUNCTIONAL CLASSES */
+
 .activeLink {
 	background-color: #D3356D !important;
+}
+
+.circlePicture {
+	-webkit-border-radius: 50em;
+	-moz-border-radius: 50em;
+	border-radius: 50em;
+	width: 200px;
+
 }
 
 .frame-link {
@@ -110,7 +145,34 @@ h1, h2, h3 {
 	display: none;
 }
 
-/* TOP NAV SHIT */
+.left {
+	float: left;
+	margin-left: 15px;
+	margin-right: 25px;
+}
+
+.right {
+	float: right;
+	margin-left: 25px;
+	margin-right: 15px;
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* TOP NAV */
 
 #top-nav {
 	margin-top: 2.5em;
@@ -153,31 +215,14 @@ h1, h2, h3 {
 	background-color: #fff;
 }
 
+
+/* LANDING & CONTENT */
+
 #content {
 	border-top: 2px solid #fff;
 	margin-left: 4px;
 	padding-top: 1em;
 	min-height: 400px;
-}
-
-
-/* content portions */
-
-span {
-	font-style: italic;
-}
-
-ul {
-	padding-bottom: 1.25em;
-	padding-left: 1.25em;
-}
-
-li {
-	font-size: 0.75em;
-}
-
-h3 {
-	padding-left: 2em;
 }
 
 #welcome {
@@ -190,13 +235,7 @@ h3 {
 	border-radius: 3em;
 }
 
-.circlePicture {
-	-webkit-border-radius: 50em;
-	-moz-border-radius: 50em;
-	border-radius: 50em;
-	width: 200px;
-
-}
+/* EVALUABLE TAB */
 
 .code-header {
 	text-align: right;
@@ -205,20 +244,6 @@ h3 {
 .code-header h4 {
 	float: left;
 }
-
-#lock-source {
-	margin-top: 0px;
-	padding-top: 4px;
-	cursor: pointer;
-	display: inline;
-	height: 100%;
-	line-height: 100%;
-}
-
-#lock-source img {
-	cursor: pointer;
-}
-
 
 #eval-intro {
 	margin-bottom: 1.5em;
@@ -253,7 +278,6 @@ h3 {
 
 #evaluable li:hover, h3:hover {
 	cursor: pointer;
-/*	background-color: #D3356D; */
 	background-color: #a03; 
 }
 
@@ -261,29 +285,33 @@ h3 {
 	background-color: #fff;
 }
 
-
-.left {
-	float: left;
-	margin-left: 15px;
-	margin-right: 25px;
-}
-
-.right {
-	float: right;
-	margin-left: 25px;
-	margin-right: 15px;
-}
-
-#content iframe {
+#evaluable iframe {
 	width: 100%;
 	height: 12em;
 	margin-bottom: 0.75em;
 }
 
-.footnote {
-	font-size: 0.75em;
-	font-style: italic;
+#web-ex img {
+	width: 100%;
 }
+
+
+#web-preview-container div.activeLink {
+	border: 2px solid #fff;
+	border-radius: 0.5em;
+}
+
+#web-preview-container {
+	margin-bottom: 0;
+}
+
+#web-preview-container div {
+	cursor: pointer;
+	background-color: #222;
+	border: 2px solid #222;
+	border-radius: 0.5em;
+}
+
 
 /*-----------------------------------*\
 	$DESKTOP OVERRIDES
