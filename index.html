@@ -16,19 +16,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Noto+Serif:700italic' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
-		<script>
-
-		// google
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-59206039-1', 'auto');
-		ga('send', 'pageview');
-
-		</script>
-		
 	</head>
 
 	<body>
@@ -94,7 +81,7 @@
 						<p>When you drive a car, there's subconsciously a room around you: you are closed off from your environment. When you're on a motorcycle, you're almost completely exposed to the world. Because of this, you get a real sense of "going" somewhere. I tried to explain this to a friend by saying, "cars are like teleporting but very slow, while bikes are like walking but very fast". Also, you have all the potential thrill from driving a car and melding with the machine.</p>
 						<div class="clear"></div>
 						<img class="circlePicture right" src="img/adventure.jpg" alt="Dirt Biking" />
-						<p>Combine this with outdoors exploring, and you have an incredibly rich experience. Last summer my brother and I tried to find the abandoned bridges in Payne County; we sent a couple submissions to <a href="http://okbridges.wkinsler.com/" target="_blank">okbridges.wkinsler.com</a>, but they said they needed to visit them themselves.</p>
+						<p>Combine this with outdoors exploring, and you have an incredibly rich experience.</p>
 					</div>
 	
 				</div>
@@ -104,6 +91,7 @@
 						<img class="circlePicture right" src="img/keyboard.jpg" alt="Refurbishing my Model M" />
 						<p>Following are some examples embodying my aptitude and ability. While most examples are of limited scope, I have both worked in a singular enterprise system hosted on SVN and I have worked with dozens of websites in the span of a week. These examples are used because they hopefully express a tacit understanding of many types of systems.</p>
 						<p>I don't have large amounts of experience with the most popular frameworks -- i.e. AngularJS, Spring, Boost, etc. -- but I am certain I would pick them up very quickly once I started working with them.</p>
+
 					</div>
 
 					<h3 id="oop-link">OOP &amp; Recursion</h3>
@@ -122,10 +110,10 @@
 						<iframe id="juggleFestSource">Source Code to JuggleFest Challenge</iframe>
 					</div><!-- end code-container -->
 					<div id="code-explain">
-						<p>This is a solution to a programming challenge<a target="_blank" href="resources/JuggleFest.html">*</a> offered by Yodle. In short, the challenge asks you to write a program that sorts out a large number of Jugglers based on various attributes and desires such that the best teams perform on their most desired Circuits. Or, you can see how I rephrased it in the comments: <span id="prob-link" class="frame-link">(FestivalCoordinator, Line 61)</span></p>
+						<p>This is a solution to a programming challenge<a target="_blank" href="resources/JuggleFest.html">*</a> offered by Yodle. In short, the challenge asks you to write a program that sorts out a large number of Jugglers based on various attributes and desires such that the best teams perform on their most desired Circuits. Or, you can see how I rephrased it in the comments: <span id="prob-link" class="frame-link">(FestivalCoordinator, Line 53)</span></p>
 						<p>As previously stated, these examples are of limited scope. If this program used polymorphic behaviors on inherited classes it would be overly complex. Example, the Coordinator could operate on a "person" and "juggler" could be a type of person, but that's pointlessly complex (and definitely not agile). </p>
 						<p>That said, because of proper encapsulation and sensible object divisions, it would be fairly easy to change this functionality. Maybe the Coordinator has to coordinate "Jugglers" and "Bowlers", in that case it might be better to have an "Athlete" class; you wouldn't need to change the function names from Juggler, and thus the Coordinator wouldn't have to change very much.</p>
-						<p>Next, the key to solving the sorting problem is recursion: when a team is full, but you come across another Juggler that is better suited, you have to shuffle that displaced Juggler onto another team. That Juggler can displace another and so on. Thus, a recursive function is the solution: <span id="recursive-link" class="frame-link">(FestivalCoordinator, line 114)</span></p>
+						<p>Next, the key to solving the sorting problem is recursion: when a team is full, but you come across another Juggler that is better suited, you have to shuffle that displaced Juggler onto another team. That Juggler can displace another and so on. Thus, a recursive function is the solution: <span id="recursive-link" class="frame-link">(FestivalCoordinator, line 112)</span></p>
 					</div>
 					</div>
 
@@ -143,15 +131,15 @@
 						<div class="grid" id="web-preview-container" style="margin-bottom: 0;">
 							<div id="a-preview" class="unit one-of-three"><img src="img/hammondtr_thumb.png" alt="hammondtr thumbnail" /></div>
 							<div id="b-preview" class="unit one-of-three"><img src="img/ambler_thumb.png" alt="Ambler Architects thumbnail" /></div>
-							<div id="c-preview" class="unit one-of-three"><img src="img/trustedfuel_thumb.png" alt="Trusted Fuel thumbnail" /></div>
+							<div id="c-preview" class="unit one-of-three"><img src="img/cicerone_thumb.png" alt="Cicerone thumbnail" /></div>
 						</div>
 						<div style="min-height: 300px" id="example-explain">
 							<div id="example-overview">
-								<p>These are a few examples of sites I've worked on. Unfortunately, you won't be able to view any back-end code. This is for two reasons, the first being that a large amount of my experience was with WordPress and PyroCMS, meaning the code-snippets existed in a database and not as a flat file. The other is the websites don't belong to me. That said, I will make sure that my next personal project has some back-end magic to showoff.</p>
+								<p>I've done quite a lot of work in a LAMP environment. I have worked with WordPress, PyroCMS, Joomla and proprietary, in-house CMS products. Additionally, I have written PHP modules and applications entirely from scratch. That said, I am always interested in other web development methodologies. *Eyeing <a href="http://www.seaside.st/" target="_blank">seaside.st</a>*</p>
 							</div>
 							<div id="a-example" class="hidden">
 								<h4>hammondtr.net - <a target="_blank" href="https://github.com/cicerone-trh/hammondtr">github</a></h4>
-								<p>This site is 100% front-end and all running code can be found through view source. It is animated with a combination of jQuery and CSS3. While I understand people generally prefer to scroll rather than to click, I personally enjoy clicking buttons. If you prefer a scrolling site, check back in a couple weeks as I plan to make a fully responsive, scrolly version.</p>
+								<p>This site is 100% front-end and all running code can be found through view source. It is animated with a combination of jQuery and CSS3. While I understand people generally prefer to scroll rather than to click, I personally enjoy clicking buttons. If you prefer a scrolling site, check back in like.. a year. A redesign that's scrolly and fully responsive is on my list of projects.</p>
 								<p>My favorite part is the code window and its navigation. It is implemented with an iframe and html files generated with VIM's :tohtml function. In order to manipulate the iframe I've written a function "setSourceWindow" that takes an iframe element, a uri, and an optional integer as arguments. </p>
 								<p>The function creates a jQuery selector for the line-number, loads the resource if needed, and then uses a jQuery function to scroll the page to the selector. It's simple, but I really like the effect.</p>
 							</div>
@@ -161,10 +149,9 @@
 								<p>Important to note that I did not design the site; the inability for the front page to fit on any but the largest screens was a concern I voiced, but everyone (designer, client) wanted it like that. Additionally, there have been a couple revisions including the display of items on the portfolio landing page and a noscript function that's throwing an error.</p>
 							</div>
 							<div id="c-example" class="hidden">
-								<h4>Phillips 66 Aviation Fuels - <a target="_blank" href="https://trustedfuel.com/">trustedfuel.com</a></h4>
-								<p>You're just going to have to take my word for this one. This is temporary until I have my personal project up and it serves to represent my back-end experience.</p>
-								<p>For this site, I was tasked with creating systems that (1) kept track of membership dues and (2) allowed admins to create Safety Classes that members could sign up for (as well as a bunch of lesser things).</p>
-								<p>The back-end for this site is an in-house CMS called "Caffeine".</p>
+								<h4>Cicerone: Personal Historian - <a target="_blank" href="https://cicph.info/">cicph.info</a></h4>
+								<p>This is a personal project I wrote to keep track of my time spent on projects. It is a fairly simple site. I log activities which belong to projects which belong to users. I have many plans to improve this site, but in its current state, it does what I need. It is meant to help embody and track constructionist learning. I enjoy using it, anyway :)</p>
+								<p>The github repo for it can be found at <a href="https://github.com/cicerone-trh/cicerone" target="_blank">github.com/cicerone-trh/cicerone</a>.</p>
 							</div>
 						</div>
 					</div>
