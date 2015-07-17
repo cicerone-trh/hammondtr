@@ -7,37 +7,50 @@
 
 		<link rel='icon' type='image/png' href='favicon.png' />
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="js/main.js"></script>
-		<script src="js/jssor.slider.mini.js"></script>
-
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Noto+Serif:700italic' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script src="js/main.js"></script>
+
 	</head>
 
 	<body>
+		<div id="backgroundFilter"></div>
+		<div id="backgroundImages">
+			<span data-order="1" id="aboutBg"></span
+			><span data-order="2" id="homeBg" class="active"></span
+			><span data-order="3" id="evalBg"></span>
+		</div>
+
 		<noscript>This page requires JavaScript to be enabled. If you really want to read, go here: <a href="noscript.html">noscript.html</a>. There will be a noscript friendlier version soon, fare well friend!</noscript>
-		<div class="container">
-			<div class="grid" id="top-nav">
-				<div class="unit one-of-three" id="about-link">About Me</div>
-				<div class="unit one-of-three" id="landing-link"><img src="img/heart_pd.svg" alt="Welcome :)" /></div>
-				<div class="unit one-of-three" id="eval-link">this.evaluable</div>
+		<header>
+			<div class="container">
+				<div class="grid" id="top-nav">
+					<div data-order="1" class="unit one-of-three" id="about-link">About Me</div>
+					<div data-order="2" class="unit one-of-three" id="landing-link"><img src="img/heart_pd.svg" alt="Welcome :)" /></div>
+					<div data-order="3" class="unit one-of-three" id="eval-link">this.evaluable</div>
+				</div>
 			</div>
+		</header>
+
+		<div class="container">
 			<div id="content">
-				<div id="welcome">
+				<div class="active-component" id="welcome">
 					<h2>Welcome to my humble online home</h2>
 
+					<!--
 					<div id="slider1_container" style="display:inline-block;width: 680px; height: 440px;">
-						<!-- Slides Container -->
 						<div u="slides" style="cursor: move; overflow: hidden; width: 680px; height: 440px;">
 							<div><img u="image" src="img/deskone.jpg" alt="Office" /></div>
 							<div><img u="image" src="img/deskthree.jpg" alt="Desk Three; Hello World" /></div>
 							<div><img u="image" src="img/homethree.jpg" alt="Quanta" /></div>
 						</div>
 					</div>
+					-->
 				</div>
 
 				<div id="about-me" class="hidden">
@@ -68,9 +81,12 @@
 						<p>Dota 2 is a complex system that professionals spend thousands of hours understanding. Because of its complexity, there is an astounding difference in understanding between me and a professional. Thus, almost every game there's something new to learn and something to be awed by.</p>
 						<p>Like a mental version of parkour: the simply stated goal is to get from point a to b as efficiently as possible, but the system of their movement is remarkable;  it's revolutionary compared to your current understanding of how to get from point a to point b. It's inspiring to always be in awe of the capabilities of humanity.</p>
 						<p>While the most stimulating part is the macro strategy, the micro can be pretty spectacular too. This clip still gives me goosebumps ^_^</p>
-						<div class="videoWrapper" style="text-align:center;margin-bottom:0.75em">
+						<p>Embedding youtube was calling many external "anti-bot" scripts, so for now I am only linking, <a href="https://www.youtube.com/embed/9WPOOuyb5I8">enjoy :)</a></p>
+						<!--
+		  				<div class="videoWrapper" style="text-align:center;margin-bottom:0.75em">
 							<iframe width="100%" src="https://www.youtube.com/embed/9WPOOuyb5I8" allowfullscreen></iframe>
 						</div>
+						-->
 					</div>
 
 					<h3 id="adrive-link">Driving</h3>
@@ -146,11 +162,12 @@
 							<div id="b-example" class="hidden">
 								<h4>Ambler Architects - <a target="_blank" href="http://staging.amblerarchitects.com/">staging.amblerarchitects.com</a></h4>
 								<p>This site is what I'd call a 'regular site', I wrote the front-end and implemented the PyroCMS back-end. It has multiple pages of content, including a portfolio section, and it uses a CMS to allow non-technical users to edit this content. </p>
-								<p>Important to note that I did not design the site; the inability for the front page to fit on any but the largest screens was a concern I voiced, but everyone (designer, client) wanted it like that. Additionally, there have been a couple revisions including the display of items on the portfolio landing page and a noscript function that's throwing an error.</p>
+								<p>I have just checked this site and it is not displaying properly on Linux/MacOS browsers. The issue is that the CSS framework being used addresses whitespace between “stacked” inline-block elements by applying a negative margin equal to the width of the parent font's whitespace. The source of the original font has expired, and it has now fallen back to browser default, which on certain machines has a 1px wider whitespace. This could have been avoided by specifying an alternate font, but when implementing the site, I was told to use only the one selected.</p>
 							</div>
 							<div id="c-example" class="hidden">
 								<h4>Cicerone: Personal Historian - <a target="_blank" href="https://cicph.info/">cicph.info</a></h4>
-								<p>This is a personal project I wrote to keep track of my time spent on projects. It is a fairly simple site. I log activities which belong to projects which belong to users. I have many plans to improve this site, but in its current state, it does what I need. It is meant to help embody and track constructionist learning. I enjoy using it, anyway :)</p>
+								<p>This is a personal project I wrote to keep track of my time spent on projects. It is a fairly simple site. I log activities which belong to projects which belong to users. It is meant to help embody and track constructionist learning. I enjoy using it, anyway :)</p>
+								<p>As I use the site more, I will update it to include useful features. I have a few plans already, but they are still in the design phase.</p>
 								<p>The github repo for it can be found at <a href="https://github.com/cicerone-trh/cicerone" target="_blank">github.com/cicerone-trh/cicerone</a>.</p>
 							</div>
 						</div>

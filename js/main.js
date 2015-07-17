@@ -3,31 +3,16 @@ $(document).ready(function () {
 /**************************************
  * top nav functionality:
  *************************************/
-	$("#about-link").click(function() {
-		$("#evaluable").slideUp();
-		$("#welcome").slideUp();
-		$("#about-me").delay(400).slideDown(300);
-		resetLinkFamily(aboutLinks);
-	});
 
-	$("#eval-link").click(function() {
-		$("#about-me").slideUp();
-		$("#welcome").slideUp();
-		$("#evaluable").delay(400).slideDown(300);
-		resetLinkFamily(evalLinks);
-	});
-
-	$("#landing-link").click(function() {
-		$("#about-me").slideUp();
-		$("#evaluable").slideUp();
-		$("#welcome").delay(400).slideDown(300);
-	});
+	addHomeLink("#about-link", "#about-me");
+	addHomeLink("#eval-link", "#evaluable");
+	addHomeLink("#landing-link", "#welcome");
 
 /**************************************
  * home page slider:
  *************************************/
-	var options = { $AutoPlay: true, $FillMode: 4, $SlideDuration: 1500, $AutoPlayInterval: 2500 };
-    var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+//	var options = { $AutoPlay: true, $FillMode: 4, $SlideDuration: 1500, $AutoPlayInterval: 2500 };
+//  var jssor_slider1 = new $JssorSlider$('slider1_container', options);
 
 /**************************************
  * about page links:
@@ -162,6 +147,47 @@ $(document).ready(function () {
 	}
 
 }); // end document onload
+
+
+function addHomeLink(linkid, blockid) {
+	$(linkid).click(function() {
+
+		// changing background widths
+		$("#backgroundImages").find(".active").removeClass("active");
+		$("#backgroundImages").find('[data-order="' + $(linkid).data("order")+'"]')
+			.addClass("active");
+
+		// sliding content blocks
+
+		var inDir, outDir;
+		if (!$(linkid).hasClass("activeLink")) {
+			
+			// determine direction
+			if ($(linkid).data("order") > $('.activeLink').data("order")) {
+				outDir = "left";	
+				inDir = "right";
+			} else {
+				outDir = "right";
+				inDir = "left";
+			}
+
+			// changing linkness
+			$('.activeLink').removeClass("activeLink");
+			$(linkid).addClass("activeLink");
+
+			// slide out out
+			$(".active-component").hide('slide', {direction: outDir}, 300);
+			$(".active-component").removeClass("active-component");
+			
+			// slide this in
+			$(blockid).delay("300").show('slide', {direction: inDir}, 300);
+			$(blockid).addClass("active-component");
+		}
+	});
+}
+
+
+
 
 function setSourceWindow(sourceFrame, file, line) {
 	var targetLine = "html,body";
