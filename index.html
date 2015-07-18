@@ -8,13 +8,16 @@
 		<link rel='icon' type='image/png' href='favicon.png' />
 
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Noto+Serif:700italic' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-		<script src="js/main.js"></script>
 
 	</head>
 
@@ -29,9 +32,9 @@
 		<noscript>This page requires JavaScript to be enabled. If you really want to read, go here: <a href="noscript.html">noscript.html</a>. There will be a noscript friendlier version soon, fare well friend!</noscript>
 		<header>
 			<div class="container">
-				<div class="grid" id="top-nav">
+				<div class="grid mobile-no" id="top-nav">
 					<div data-order="1" class="unit one-of-three" id="about-link">About Me</div>
-					<div data-order="2" class="unit one-of-three" id="landing-link"><img src="img/heart_pd.svg" alt="Welcome :)" /></div>
+					<div data-order="2" class="activeUnit unit one-of-three" id="landing-link"><img src="img/heart_pd.svg" alt="Welcome :)" /></div>
 					<div data-order="3" class="unit one-of-three" id="eval-link">this.evaluable</div>
 				</div>
 			</div>
@@ -41,16 +44,12 @@
 			<div id="content">
 				<div class="active-component" id="welcome">
 					<h2>Welcome to my humble online home</h2>
-
-					<!--
-					<div id="slider1_container" style="display:inline-block;width: 680px; height: 440px;">
-						<div u="slides" style="cursor: move; overflow: hidden; width: 680px; height: 440px;">
-							<div><img u="image" src="img/deskone.jpg" alt="Office" /></div>
-							<div><img u="image" src="img/deskthree.jpg" alt="Desk Three; Hello World" /></div>
-							<div><img u="image" src="img/homethree.jpg" alt="Quanta" /></div>
-						</div>
-					</div>
-					-->
+					<ul>
+						<li><a target="_blank" href="https://github.com/cicerone-trh" ><i class="fa fa-github fa-3x"></i></a></li>
+						<li><a target="_blank" href="mailto:hammondtr.mind@gmail.com"><i class="fa fa-envelope-o fa-3x"></i></a></li>
+						<li><a target="_blank" href="https://plus.google.com/103663803913977102844"><i class="fa fa-google-plus fa-3x"></i></a></li>
+						<li><a target="_blank" href="resources/resume.doc"><i class="fa fa-file-text-o fa-3x"></i></a></li>
+					</ul>
 				</div>
 
 				<div id="about-me" class="hidden">
@@ -81,7 +80,7 @@
 						<p>Dota 2 is a complex system that professionals spend thousands of hours understanding. Because of its complexity, there is an astounding difference in understanding between me and a professional. Thus, almost every game there's something new to learn and something to be awed by.</p>
 						<p>Like a mental version of parkour: the simply stated goal is to get from point a to b as efficiently as possible, but the system of their movement is remarkable;  it's revolutionary compared to your current understanding of how to get from point a to point b. It's inspiring to always be in awe of the capabilities of humanity.</p>
 						<p>While the most stimulating part is the macro strategy, the micro can be pretty spectacular too. This clip still gives me goosebumps ^_^</p>
-						<p>Embedding youtube was calling many external "anti-bot" scripts, so for now I am only linking, <a href="https://www.youtube.com/embed/9WPOOuyb5I8">enjoy :)</a></p>
+						<p>Embedding youtube was calling many external "anti-bot" scripts, so for now I am only linking, <a href="https://www.youtube.com/embed/9WPOOuyb5I8" target="_blank">enjoy :)</a></p>
 						<!--
 		  				<div class="videoWrapper" style="text-align:center;margin-bottom:0.75em">
 							<iframe width="100%" src="https://www.youtube.com/embed/9WPOOuyb5I8" allowfullscreen></iframe>
@@ -172,10 +171,12 @@
 							</div>
 						</div>
 					</div>
-										
 				</div>
 			</div>
 		</div><!-- end site-container -->
+		<footer>
+		</footer>
+		<script src="js/main.js"></script>
 	</body>
 </html>
 

@@ -160,10 +160,10 @@ function addHomeLink(linkid, blockid) {
 		// sliding content blocks
 
 		var inDir, outDir;
-		if (!$(linkid).hasClass("activeLink")) {
+		if (!$(linkid).hasClass("activeUnit")) {
 			
 			// determine direction
-			if ($(linkid).data("order") > $('.activeLink').data("order")) {
+			if ($(linkid).data("order") > $('.activeUnit').data("order")) {
 				outDir = "left";	
 				inDir = "right";
 			} else {
@@ -172,8 +172,8 @@ function addHomeLink(linkid, blockid) {
 			}
 
 			// changing linkness
-			$('.activeLink').removeClass("activeLink");
-			$(linkid).addClass("activeLink");
+			$('.activeUnit').removeClass("activeUnit");
+			$(linkid).addClass("activeUnit");
 
 			// slide out out
 			$(".active-component").hide('slide', {direction: outDir}, 300);
