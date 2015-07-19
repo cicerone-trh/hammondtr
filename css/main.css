@@ -104,62 +104,12 @@ a:visited {
 	color: #fff;
 }
 
-span {
-	font-style: italic;
-}
-
 li {
 	font-size: 0.75em;
 }
 
 h3 {
 	padding-left: 2em;
-}
-
-/*-----------------------------------*\
-	$BACKGROUND
-\*-----------------------------------*/
-
-#backgroundFilter {
-	background-color: #1a3d5c;
-    height: 100%;
-    opacity: 0.7;
-    position: fixed;
-    width: 100%;
-    z-index: -1;
-}
-
-#backgroundImages {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	z-index: -2;
-}
-
-#backgroundImages span {
-	width: 12%;
-	height: 100%;
-	display:inline-block;
-	background-attachment: fixed;
-	background-size: cover;
-	transition: width 0.6s;
-}
-
-#backgroundImages .active {
-	width: 76%;
-}
-
-#aboutBg {
-	background-image: url("../img/aboutBg.jpg");
-}
-
-#homeBg {
-	background-image: url("../img/homeBg.jpg");
-}
-
-#evalBg {
-	background-image: url("../img/evalBg.jpg");
-	background-position: right top, 0px 0px;
 }
 
 
@@ -177,8 +127,7 @@ h3 {
 	-webkit-border-radius: 50em;
 	-moz-border-radius: 50em;
 	border-radius: 50em;
-	width: 175px;
-
+	width: 200px;
 }
 
 .frame-link {
@@ -190,19 +139,6 @@ h3 {
 .hidden {
 	display: none;
 }
-
-.left {
-	float: left;
-	margin-left: 15px;
-	margin-right: 25px;
-}
-
-.right {
-	float: right;
-	margin-left: 25px;
-	margin-right: 15px;
-}
-
 /* TOP NAV */
 
 header {
@@ -251,12 +187,29 @@ header {
 	background-color: #D3356D;
 /*	background-color: #a03; */
 }
+
 #top-nav div:active {
 	background-color: #fff;
 }
 
+i {
+	-webkit-transition: color 0.25s ease-in-out;
+	-moz-transition: color 0.25s ease-in-out;
+	-ms-transition: color 0.25s ease-in-out;
+	-o-transition: color 0.25s ease-in-out;
+	transition: color 0.25s ease-in-out;
+}
+
+i:hover {
+	color: #D3356D;
+}
+
 
 /* LANDING & CONTENT */
+
+#about-intro, #eval-intro {
+	margin-bottom: 12px;
+}
 
 #content {
 	background-color: transparent;
@@ -270,6 +223,10 @@ header {
 
 #content div {
 	overflow: auto;
+}
+
+#content span {
+	font-style: italic;
 }
 
 #welcome {
@@ -287,13 +244,17 @@ header {
 
 #welcome ul li {
 	display: inline-block;
-	padding: 0 15px;
+	padding: 0 10px;
 }
 
 /* EVALUABLE TAB */
 
 .code-header {
 	text-align: right;
+}
+
+#content div .code-header {
+	overflow: visible;
 }
 
 .code-header h4 {
@@ -371,7 +332,109 @@ header {
 /*-----------------------------------*\
 	$DESKTOP OVERRIDES
 \*-----------------------------------*/
-	@media screen and (min-width: 650px) {
+
+/*
+ *	630px: code window max -- add this point in, also, iphone displays :\
+ *	430px: headers
+ * */
+
+/*
+
+	@media screen and (max-width: 536px) {
+		.desktop {
+			display: none !important; 
+		}	
+	}
+
+
+	@media screen and (min-width: 536px) {
+		.mobile{
+			display: none !important; 
+		}	
+	}
+*/
+
+	@media screen and (min-width: 430px) {
+
+		.mobile{
+			display: none !important; 
+		}	
+
+		/* it would appear I am getting impatient */
+
+		div.circlePicture {
+			width: auto;
+		}
+
+		div.left {
+			margin:0;
+		}
+
+		div.right {
+			margin:0;
+		}
+
+		.left {
+			float: left;
+			margin-left: 15px;
+			margin-right: 25px;
+		}
+
+		.right {
+			float: right;
+			margin-left: 25px;
+			margin-right: 15px;
+		}
+
+
+
+		/*-----------------------------------*\
+			$BACKGROUND
+		\*-----------------------------------*/
+
+		#backgroundFilter {
+			background-color: #1a3d5c;
+			height: 100%;
+			opacity: 0.7;
+			position: fixed;
+			width: 100%;
+			z-index: -1;
+		}
+
+		#backgroundImages {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			z-index: -2;
+		}
+
+		#backgroundImages span {
+			width: 12%;
+			height: 100%;
+			display:inline-block;
+			background-attachment: fixed;
+			background-size: cover;
+			transition: width 0.6s;
+		}
+
+		#backgroundImages .active {
+			width: 76%;
+		}
+
+		#aboutBg {
+			background-image: url("../img/aboutBg.jpg");
+		}
+
+		#homeBg {
+			background-image: url("../img/homeBg.jpg");
+		}
+
+		#evalBg {
+			background-image: url("../img/evalBg.jpg");
+			background-position: right top, 0px 0px;
+		}
+
+
 
 		.grid {
 			margin-left: -3%;
@@ -415,11 +478,70 @@ header {
 		.three-of-five { width: 57%; }
 		.four-of-five { width: 77%; }
 
+		.mobile {
+			display: none !important;
+		}
 	}
 
-	@media screen and (max-width: 640px) {
-		.mobile-no {
-		/*	display: none !important; */
+
+	@media screen and (max-width: 430px) {
+
+		.desktop {
+			display: none !important; 
+		}	
+
+		h2 {
+			text-align: center;
+			font-size: 1.8em;
+		}
+
+		h3 {
+			
+			text-align: center;
+			font-size: 1.0em;
+			height: 33px; /* 33, 48 */
+			line-height: 33px;
+			padding: 0px;
+		}
+
+		div.circlePicture {
+			text-align:center;	
+			width: 100%;
+		}
+
+		
+		body {
+			background-color: #1a3d5c;
+		}
+
+		#top-nav.grid, #web-ex .grid {
+			margin-left: -3%;
+			max-width: 105%;
+		}
+		
+		#top-nav .unit, #web-ex .unit {
+			display: inline-block;
+			*display: inline;
+			*zoom: 1;
+			vertical-align: top;
+			margin-left: 3%;
+			margin-right: -.25em;
+			overflow: visible;
+		}
+
+		#web-ex .one-of-three {
+			width: 30.36%;
+		}
+
+
+		#landing-link {
+			width: 57%; 
+		}
+
+		#about-link, #eval-link {
+			width: 17%;
+			font-family: monospace;
+			font-size: 10px;
 		}
 	}
 	

@@ -4,6 +4,7 @@
 		<title>HammondTR - Hub</title>
 		
 		<meta charset="utf-8"> 
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
 		<link rel='icon' type='image/png' href='favicon.png' />
 
@@ -32,10 +33,16 @@
 		<noscript>This page requires JavaScript to be enabled. If you really want to read, go here: <a href="noscript.html">noscript.html</a>. There will be a noscript friendlier version soon, fare well friend!</noscript>
 		<header>
 			<div class="container">
-				<div class="grid mobile-no" id="top-nav">
-					<div data-order="1" class="unit one-of-three" id="about-link">About Me</div>
-					<div data-order="2" class="activeUnit unit one-of-three" id="landing-link"><img src="img/heart_pd.svg" alt="Welcome :)" /></div>
-					<div data-order="3" class="unit one-of-three" id="eval-link">this.evaluable</div>
+				<div class="grid" id="top-nav">
+					<div data-order="1" class="unit one-of-three" id="about-link">
+						<span class="desktop">About Me</span><span class="mobile">?</span>
+					</div>
+					<div data-order="2" class="activeUnit unit one-of-three" id="landing-link">
+						<img src="img/heart_pd.svg" alt="Welcome :)" />
+					</div>
+					<div data-order="3" class="unit one-of-three" id="eval-link">
+						<span class="desktop">this.evaluable</span><span class="mobile">eval()</span>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -55,7 +62,8 @@
 				<div id="about-me" class="hidden">
 
 					<div id="about-intro">
-					<h2><img class="circlePicture left" src="img/me.jpg" alt="Tyler Hammond, mugshot" />Hello, I'm Tyler</h2>
+					<div class="circlePicture left"><img class="circlePicture left" src="img/me.jpg" alt="Tyler Hammond, mugshot" /></div>
+					<h2>Hello, I'm Tyler</h2>
 					<p>I'm terrible at this even though I've done it a dozen times. I'm going to try to express me by expressing some things that I like: I like programming, I like video games, and I like driving (to name a few). When I say I like something, I mean I have a fairly deep passion for it. It's hard to share how I feel about these things, but I'll do my best.</p>
 					</div>
 					<div class="clear"></div>
@@ -63,13 +71,13 @@
 					<h3 id="aprog-link">Programming</h3>
 					<div id="about-programming" class="hidden">
 					<!-- my heroes: Alan Turing, Alan Kay, John von Neumann; photos public domain, fair use or CC (alan kay:  -->
-						<img src="img/neumann.jpg" class="circlePicture right" alt="John von Neumann, master Abstractor" />
+						<div class="circlePicture right"><img src="img/neumann.jpg" class="circlePicture right" alt="John von Neumann, master Abstractor" /></div>
 						<p>First is the nebulous concept of programming. There are two aspects I can divide my passion into: the abstract, romantic notion of the undefinable limits of computers and the tangible, practical satisfaction of crafting something to accomplish a goal.</p>
 						<p>There is nothing special about a Turing machine in itself. Computers are remarkable because of the human ability to abstract meaning. We set systems up to represent any process we can abstract and a computer can embody that. Further, the only things that 'exist' are relative abstractions that our mind creates. Because of this one to one relationship (reality abstraction : computer abstraction), the only limit to what can be done with a computer is the limits of our perception. Or, more eloquently, anything is possible with a machine that can process lists.</p>
 						<p>Another way to put it is: everything we know about the world is a model. Computers can embody any model we imagine. Thus, computers are capable of anything.</p>
 						<p>But that's just the romantic part of programming that only rarely makes you swoon; that realization is a clear night, with a new moon in the country and the stars are so vivid you notice the Orion Nebula for the first time.</p>
 						<div class="clear"></div>
-						<img src="img/alan_kay.jpg" class="circlePicture left" alt="Alan Kay, human-computer Champion" />
+						<div class="circlePicture left"><img src="img/alan_kay.jpg" class="circlePicture left" alt="Alan Kay, human-computer Champion" /></div>
 						<p>The true romance is the practical nature of the beast: it is an opportunity to build something completely new out of nothing, to really test one's mental craftsmanship. Indeed, the sort of mental acrobatics required and the satisfaction of having built something that provides tangible results are what make the discipline so enticing. It is a modern-day artisanal profession: the languages and frameworks are the medium from which to shape a functional experience.</p>
 						<p>It's the satisfaction of getting something working just like you wanted it to, when the pieces all come together and you just want to play with it.</p>
 					</div>
@@ -90,20 +98,20 @@
 
 					<h3 id="adrive-link">Driving</h3>
 					<div id="about-driving" class="hidden">
-						<img src="img/dailydriver.jpg" class="circlePicture left" alt="My daily driver, S2000 AP2" />
+						<div class="circlePicture left"><img src="img/dailydriver.jpg" class="circlePicture left" alt="My daily driver, S2000 AP2" /></div>
 						<p>Driving is perhaps the least suited of these passions to express via text. You just have to live it and understand it; there's nothing quite like going fast. It's thrilling and it's incredibly easy to get into flow identifying the limit of your vehicle as you take a turn. </p>
 						<p>But that's only one variant of driving. Another variant of driving would be dirt bikes. This is even harder to express via text, because far fewer people have the experience to build on.</p>
 						<p>When you drive a car, there's subconsciously a room around you: you are closed off from your environment. When you're on a motorcycle, you're almost completely exposed to the world. Because of this, you get a real sense of "going" somewhere. I tried to explain this to a friend by saying, "cars are like teleporting but very slow, while bikes are like walking but very fast". Also, you have all the potential thrill from driving a car and melding with the machine.</p>
 						<div class="clear"></div>
-						<img class="circlePicture right" src="img/adventure.jpg" alt="Dirt Biking" />
+						<div class="circlePicture right"><img class="circlePicture right" src="img/adventure.jpg" alt="Dirt Biking" /></div>
 						<p>Combine this with outdoors exploring, and you have an incredibly rich experience.</p>
 					</div>
 	
 				</div>
 				<div id="evaluable" class="hidden">
 					<div id="eval-intro">
-					<h2>// presents self as an evaluable construct</h2>
-						<img class="circlePicture right" src="img/keyboard.jpg" alt="Refurbishing my Model M" />
+						<h2>// presents self as an evaluable construct</h2>
+						<div class="circlePicture right"><img class="circlePicture right" src="img/keyboard.jpg" alt="Refurbishing my Model M" /></div>
 						<p>Following are some examples embodying my aptitude and ability. While most examples are of limited scope, I have both worked in a singular enterprise system hosted on SVN and I have worked with dozens of websites in the span of a week. These examples are used because they hopefully express a tacit understanding of many types of systems.</p>
 						<p>I don't have large amounts of experience with the most popular frameworks -- i.e. AngularJS, Spring, Boost, etc. -- but I am certain I would pick them up very quickly once I started working with them.</p>
 
@@ -112,7 +120,10 @@
 					<h3 id="oop-link">OOP &amp; Recursion</h3>
 					<div id="oop" class="hidden">
 					<!-- option: set a data attribute for frame src, makes the script simpler -->
-					<div id="code-container">
+					<div class="mobile">
+						<p><span>To view code, rotate your device :)</span></p>
+					</div>
+					<div class="desktop" id="code-container">
 						<div class="code-header">
 						<h4>Juggle Fest ::</h4>
 						<ul>
@@ -134,7 +145,10 @@
 
 					<h3 id="asm-link">Assembly &amp; Computation</h3>
 					<div id="asm" class="hidden">
-						<iframe id="asm-source"></iframe>
+						<div class="mobile">
+							<p><span>To view code, rotate your device :)</span></p>
+						</div>
+						<iframe class="desktop" id="asm-source"></iframe>
 						<p>Unfortuately, due to the nature of my employment during the time I was working with assembly, there is little source code that I solely authored and that I currently have on hand. Of the items I do have access to, the most complicated is still very simple.</p>
 						<p>Still, I have included this section because I found assembly to be extremely enlightening. I think a stint in low-level C or asm is somewhat of a pilgrimage all programmers should take. The implicit understanding of how code exists in memory and that it is indistinguishable from data alone is worth the undertaking. Of course, you could also learn this through Lisp, but I don't know, the logical respresentation of the processor, its registers, IO calls, etc makes it easy it understand.</p>
 						<p>With assembly and my foray into SmallTalk, I could really understand the power of abstractions and the power of computation.</p>

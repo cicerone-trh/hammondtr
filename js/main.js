@@ -50,15 +50,7 @@ $(document).ready(function () {
 		linkid:"#oop-link",
 		blockid:"#oop",
 		extra: function() {
-			$("#program-link").addClass("activeLink").siblings().removeClass("activeLink");
-			$("#juggleFestSource").unbind("load");
-			$("#juggleFestSource").attr('src', 'resources/Program.cs.html');
-			$("#juggleFestSource").load(function() {
-				$("#juggleFestSource").contents()
-									  .find("html, body")
-									  .delay(300)
-									  .animate({ scrollTop: $("#juggleFestSource").contents().find("#main").position().top }, 'slow');
-			})
+			setSourceWindow('#juggleFestSource','resources/Program.cs.html', 9);
 		}
 	});
 	evalLinks.push({
@@ -190,6 +182,7 @@ function addHomeLink(linkid, blockid) {
 
 
 function setSourceWindow(sourceFrame, file, line) {
+
 	var targetLine = "html,body";
 
 	if (line) {
